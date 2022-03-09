@@ -1,0 +1,211 @@
+.form-cart table {
+    width: 100%;
+}
+
+.form-cart {}
+.form-cart table{}
+.form-cart table tr{}
+.form-cart table td {padding: 0 10px;}
+
+.form-cart table th{
+    text-align: left;
+    padding: 0 10px;
+}
+.product-thumbnail {
+    width: 70px;
+}
+.product-thumbnail img{
+    width:70px;
+    height:auto;
+}
+.product-subtotal {
+    width: 100px;
+}
+.product-qunt__wrap {
+    width: 100px;
+}
+.product-price__wrap {
+    width: 194px;
+}
+.product-delete {
+    width: 30px;
+}
+.product-delete img{
+    width:10px;
+    height:10px;
+}
+
+.bascet_mobile_feild {
+    display:none;
+}
+
+.product-delete__top, .product-delete__bottom {
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    top: 10px;
+    left: 50%;
+    margin-left: -7px;
+    background-color: gray;
+}
+.dellBtnNew img {
+    cursor: pointer;
+}
+.cart-subtotal__price {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart-subtotal__price-content {
+    display: inline-block;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #d40000;
+    background-color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.cart-subtotal__price-content-price {
+    color: #d44c72;
+    font-weight: bold;
+}
+.checkout-form__block input, .checkout-form__block select, .checkout-form__block textarea {
+    border-radius: 0;
+    background: none;
+    /* text-align: center; */
+    color: black;
+    border: 1px solid #959595;
+    height: 40px;
+    font-size: 20px;
+    padding: 0;
+    flex-grow: 3;
+    outline: none;
+    padding-left: 4px;
+}
+
+.checkout-form__block {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 60%;
+    margin: 10px 1px;
+}
+
+.checkout-form__block textarea {
+    min-height: 70px;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.checkout-form__block-submit-btn {
+    margin-right:auto;
+}
+
+.bascetTitleComment {
+    font-size:14px;
+}
+
+.bascetTitle {
+    color: #000;
+    text-decoration: none;
+    margin:0;
+}
+.product-name a {
+    text-decoration: none;
+}
+.checkout-form__block-checked {
+    display: none;
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 80%;
+    background-size: 80%;
+    background-image: url(../img/icon/checked.svg);
+}
+
+.checkout-form__block-wrong {
+    display: none;
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 80%;
+    background-size: 80%;
+    background-image: url(../img/icon/cancel.svg);
+}
+
+.checkout-form .link-button {
+    cursor: pointer;
+    position: static;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.bascet-price__old {
+    text-decoration: line-through;
+    color: #000;
+    margin-right: 10px;
+}
+.current-price {
+    color: #de001e;
+    font-size: 20px;
+    font-weight: 700;
+}
+@media only screen and (max-width: 992px) {
+    .product-name__wrap {
+        width: 80%;
+        margin-bottom: 14px;
+    }
+    .product-thumbnail {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .product-price__wrap, .product-qunt__wrap {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .bascet_mobile_feild {
+        display: block;
+        font-weight: bold;
+    }
+    .cart-item {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-align-items: center;
+        align-items: center;
+        border-bottom: 1px solid gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .form-cart thead {
+        display: none;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .checkout-form__block {
+        width: 100%;
+    }
+} 
