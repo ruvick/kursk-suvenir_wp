@@ -569,19 +569,6 @@ textarea {
   width: 100%;
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -2537,7 +2524,7 @@ body {
   line-height: 1.2;
   font-family: Literata, serif;
   color: #333;
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
 }
 
 input[type=submit] {
@@ -2804,7 +2791,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  background-color: #f2f2f2
+  /* background-color: #f2f2f2 */
 }
 
 .sidebar-catalog {
@@ -3971,6 +3958,126 @@ article.page {
 .mobile-catalog__btn {
   text-transform: uppercase;
 }
+
+.main-bnr-index {
+  margin: 0;
+}
+
+.cat-products {
+  padding: 45px 0;
+  background: #F0F1F1;
+}
+
+.cat-products__products-loop-content {
+  background-color: #dfb75f
+}
+
+.cat-products h2 {
+  margin-top: 0;
+}
+
+.applic {
+  padding: 65px 0;
+}
+.applic__block {
+  position: relative;
+  padding: 42px 160px 50px 162px;
+  color: #fff;
+  background: grey;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  background-image: url("img/form.jpg");
+  /* border-radius: 30px; */
+  overflow: hidden;
+}
+
+.applic__block-title {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 7px;
+}
+
+.applic__block-subtitle {
+  position: relative;
+  z-index: 5;
+  font-size: 22px;
+  line-height: 26.4px;
+  margin-bottom: 51px;
+}
+
+.applic__block-form {
+  position: relative;
+  z-index: 5;
+}
+
+.applic__block-form-input {
+  display: inline;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33%;
+          flex: 0 1 33%;
+}
+
+.applic__block-form-input:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.applic__block-footnote {
+  font-size: 14px;
+}
+
+.applic__block-form .form__error {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.applic__block-form .form__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.applic__block-form-btn {
+  padding: 6px 42px;
+  min-width: 263px;
+}
+
+.nuar_blk {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #00000055;
+}
+
+.main-content-index {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1600px) {
   .page-template-page-reviews .slick-dots {

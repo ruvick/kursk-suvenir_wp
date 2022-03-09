@@ -28,7 +28,6 @@
 </head>
 
 <body <?php body_class(); ?>> 
-  <div class="wrapper">
 
   <div style="display: none;">
   <div class="box-modal" id="messgeModal">
