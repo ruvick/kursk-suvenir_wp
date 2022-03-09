@@ -12,11 +12,11 @@
  * @package souvenir
  */
 
-get_header();
+get_header();  
 ?>
 
 <div id="primary" class="content-area">
-  <main id="main" class="site-main">
+  <main id="main" class="site-main"> 
 
     <div class="main-content__wrapper">
       <div class="main-content__wrapper container">
