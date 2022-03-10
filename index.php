@@ -23,18 +23,21 @@ get_header();
 
         <div class="main-content-index">
 
-          <div class="main-bnr-index main-bnr" >
+          <div class="main-bnr-index main-bnr">
+            <div class="nuar_blk"></div>
             <div class="main-bnr__slider">
               <div class="main-bnr__item" style="background-image: url(<?php echo get_template_directory_uri();?>/img/k-slide-1.jpg)"></div>
               <div class="main-bnr__item" style="background-image: url(<?php echo get_template_directory_uri();?>/img/k-slide-2.jpg)"></div>
               <div class="main-bnr__item" style="background-image: url(<?php echo get_template_directory_uri();?>/img/k-slide-3.jpg)"></div>
             </div>
-            <div class="main-bnr__content">
-              <h1 class="main-bnr__title">Сувенирная продукция <span>Курской области</span></h1>
+            <div class="container">
+              <div class="main-bnr__content">
+                <h1 class="main-bnr__title">Сувенирная продукция <span>Курской области</span></h1>
+              </div>
             </div>
           </div>
 
-          <section class="cat-products products">
+          <section class="cat-products products"> 
             <div class="container">
             <h2 class="section-title"><span>Каталог продукции</span></h2>
             <div class="products-wrapper">
