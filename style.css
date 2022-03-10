@@ -4159,6 +4159,26 @@ input[type=text], input[type=email], input[type=tel], textarea {
   cursor: pointer;
 }
 
+.btn_red {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  padding: 3px 13px;
+  border-radius: 20px;
+  background: #d30000;
+  border: 0.73px solid #d30000;
+  cursor: pointer;
+}
+
 .d-flex {
   display: flex;
 }
@@ -4170,7 +4190,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
 .similar__title {
   margin: 0 0 39px 0;
 }
-.similar__title span {
+.single-section-title span {
   background: #fff;
 }
 .prodCard__row {
@@ -4223,16 +4243,57 @@ input[type=text], input[type=email], input[type=tel], textarea {
   line-height: 19.91px;
 }
 .prodCard__box-descp-flex-link {
-  font-size: 15px;
-  color: #fff;
-  padding: 3px 13px;
-  border-radius: 20px;
-  background: #d30000;
-  border: 0.73px solid #d30000;
-  cursor: pointer;
+
 }
 
+.cardProduct {
+  padding: 35px 0;
+}
 
+.single-section-title {
+}
+.section-title {
+}
+.cardProduct__row {
+  display: flex;
+}
+.cardProduct__slider {
+  flex: 0 0 39.5%;
+  border: 0.3px solid #d0d2d3;
+  margin-right: 50px;
+}
+.cardProduct__slide {
+}
+.cardProduct-sl-paggination {
+}
+.cardProduct__descp {
+  flex: 1 1 auto;
+}
+.cardProduct__descp-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 33px;
+}
+.cardProduct__descp-price {
+  font-size: 40px;
+  line-height: 33px;
+  margin: 0;
+}
+.cardProduct__descp-vendore {
+  font-size: 18px;
+  line-height: 35px;
+  color: #231f20;
+  margin: 0;
+}
+.cardProduct__descp-btn {
+}
+.cardProduct__descp-info {
+  margin: 0;
+}
+.cardProduct__descp-info-text {
+  margin: 0;
+}
 
 
 
