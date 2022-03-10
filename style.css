@@ -4159,6 +4159,84 @@ input[type=text], input[type=email], input[type=tel], textarea {
   cursor: pointer;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.similar {
+  padding: 52px 0 88px 0;
+}
+
+.similar__title {
+  margin: 0 0 39px 0;
+}
+.similar__title span {
+  background: #fff;
+}
+.prodCard__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -17px;
+}
+.prodCard__column {
+  display: flex;
+  flex: 0 1 20%;
+  padding: 0 17px;
+}
+.prodCard__box {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 100%;
+  padding-bottom: 16px;
+  background: #DEB65F;
+  overflow: hidden;
+}
+.prodCard__box-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 302px;
+  max-height: 302px;
+  border: 0.3px solid #d0d2d3;
+  background: #fff;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+.prodCard__box-descp {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 15px 0 15px;
+  height: 100%;
+}
+.prodCard__box-descp-title {
+  font-size: 16px;
+  line-height: 19.91px;
+  flex: 1 1 auto;
+  margin: 0 0 15px 0;
+}
+.prodCard__box-descp-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.prodCard__box-descp-flex-price {
+  font-size: 23.6px;
+  line-height: 19.91px;
+}
+.prodCard__box-descp-flex-link {
+  font-size: 15px;
+  color: #fff;
+  padding: 3px 13px;
+  border-radius: 20px;
+  background: #d30000;
+  border: 0.73px solid #d30000;
+  cursor: pointer;
+}
+
+
+
+
+
+
 
 
 
