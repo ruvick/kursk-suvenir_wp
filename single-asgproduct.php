@@ -43,8 +43,16 @@ get_header('page'); ?>
 				<p class="cardProduct__descp-info-text">Двойной фон</p>
 
 				<h4 class="cardProduct__descp-title">Цвет</h4>
+				<div class="cardProduct__descp-color">
+					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_white"></a>
+					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_red"></a>
+					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_brown"></a>
+					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_green"></a>
+					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_blue"></a>
+					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_black"></a>
+				</div>
 
-				<h4 class="cardProduct__descp-title">Описание</h4>
+				<h4 class="cardProduct__descp-title">Описание</h4> 
 				<div class="cardProduct__descp-title-text">
 					Кружка. Размер изделия  160x140x140мм. Изготовлена в полном соответствии с  традиционной хохломской технологией золочения.  
 					Выточена из цельного дерева вручную. Имеет авторскую роспись в технике фонового письма. Роспись «Двойной фон».  Возможно разместить заказ на 

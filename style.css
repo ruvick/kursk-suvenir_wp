@@ -4258,8 +4258,12 @@ input[type=text], input[type=email], input[type=tel], textarea {
   display: flex;
 }
 .cardProduct__slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 0 0 39.5%;
-  border: 0.3px solid #d0d2d3;
+  height: 672px;
+  border: 0.3px solid #d0d2d3; 
   margin-right: 50px;
 }
 .cardProduct__slide {
@@ -4292,12 +4296,59 @@ input[type=text], input[type=email], input[type=tel], textarea {
   margin: 0;
 }
 .cardProduct__descp-info-text {
-  margin: 0;
+  margin: 0 0 20px 0;
+}
+.cardProduct__descp-title {
+  margin: 0 0 10px 0;
+}
+.cardProduct__descp-title-text {
+  font-size: 18px;
+  line-height: 27px;
+  color: #231f20;
+  margin-bottom: 25px;
+}
+.cardProduct__descp-color {
+  display: flex;
+  margin-bottom: 23px;
+}
+.cardProduct__descp-color-link {
+  flex: 0 0 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 9px;
+}
+.cardProduct__descp-color-link_white {
+  border: 1px solid #D0D2D3;
+  background: #fff;
+}
+.cardProduct__descp-color-link_red {
+  background: #EC1C24;
+}
+.cardProduct__descp-color-link_brown {
+  background: #D9A52A;
+}
+.cardProduct__descp-color-link_green {
+  background: #39B44A;
+}
+.cardProduct__descp-color-link_blue {
+  background: #00ADEE;
+}
+.cardProduct__descp-color-link_black {
+  background: #000000;
 }
 
-
-
-
+.cardProduct__descp-title-list {
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+.cardProduct__descp-title-list li {
+  font-size: 18px;
+  line-height: 15px;
+  color: #58595b;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
 
 
 
