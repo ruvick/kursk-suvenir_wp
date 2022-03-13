@@ -4350,6 +4350,92 @@ input[type=text], input[type=email], input[type=tel], textarea {
   margin: 0 0 10px 0;
 }
 
+.catalog-sec {
+}
+.catalog-sec__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.catalog-sec__sidebar {
+  flex: 0 1 20.3%;
+  border: 1px solid #000;
+}
+.catalog-sec__product {
+  flex: 0 1 77.3%;
+}
+.catalog-sec__row {
+  margin: 0 -12px;
+}
+
+.catalog-sec__row .prodCard__column {
+  display: flex;
+  flex: 0 1 25%;
+  padding: 0 12px 24px 0;
+}
+
+.catalog-sec__sorting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+}
+.catalog-sec__sorting-name {
+  margin-right: 30px;
+}
+.catalog-sec__sorting-select-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.catalog-sec__options {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.catalog-sec__options-item {
+  margin-right: 20px;
+}
+.options__item {
+  position: relative;
+  cursor: pointer;
+}
+.options__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+}
+.options__text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+}
+.catalog-sec__options-input:checked + .catalog-sec__options-text {
+  color: #af0018;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
 
 
 
