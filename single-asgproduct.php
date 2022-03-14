@@ -15,7 +15,7 @@ get_header('page'); ?>
 		}
 	?>
 
-		<h2 class="single-section-title section-title"><span>Кружка 160 х 140</span></h2>
+		<h1 class="single-section-title section-title"><span><?php echo the_title();?></span></h1>
 
 		<div class="cardProduct__row">
 
@@ -26,16 +26,24 @@ get_header('page'); ?>
 						<img src="<?php echo get_template_directory_uri();?>/img/cardProductSl.jpg" alt="">								
 					</div>
 
+					<div class="cardProduct__slide slider__slide">
+						<img src="<?php echo get_template_directory_uri();?>/img/cardProductSl.jpg" alt="">								
+					</div>
+
+					<div class="cardProduct__slide slider__slide">
+						<img src="<?php echo get_template_directory_uri();?>/img/cardProductSl.jpg" alt="">								
+					</div>
+
 				</div>
 				<!-- Кнопки-точки -->
-				<div class="cardProduct-sl-paggination swiper-paggination"></div>
+				<div class="product-sl-paggination swiper-paggination"></div>
 			</div>
 
 			<div class="cardProduct__descp">
 
 				<div class="cardProduct__descp-flex">
-					<div class="cardProduct__descp-price">2 470 Р</div>
-					<div class="cardProduct__descp-vendore">Артикул: 13130160140</div>
+					<div class="cardProduct__descp-price"><?php echo carbon_get_the_post_meta('as_product_price')?> ₽</div>
+					<div class="cardProduct__descp-vendore">Артикул: <?php echo carbon_get_the_post_meta('as_sku')?></div>
 					<button class="cardProduct__descp-btn btn_red">В корзину</button>
 				</div>
 
@@ -54,20 +62,16 @@ get_header('page'); ?>
 
 				<h4 class="cardProduct__descp-title">Описание</h4> 
 				<div class="cardProduct__descp-title-text">
-					Кружка. Размер изделия  160x140x140мм. Изготовлена в полном соответствии с  традиционной хохломской технологией золочения.  
-					Выточена из цельного дерева вручную. Имеет авторскую роспись в технике фонового письма. Роспись «Двойной фон».  Возможно разместить заказ на 
-					изготовление изделия с другими  видами росписи «Ягоды»,  «Торжество»,  «Ландыши». Срок изготовления персонального заказа 21-45 дней.  
-					Лаковое покрытие и многократный высокотемпературный обжиг делает изделие влагозащищенным и износоустойчивым. Все применяемые при производстве 
-					материалы натуральны и экологичны. Кружка предназначена для холодных и горячих напитков, а также может служить элементом декора помещения. 
-					На каждом изделии имеется подпись автора росписи. Упаковка из брендированного картона.
+					<?php echo carbon_get_the_post_meta('as_short_derscr')?>
 				</div>
 
 				<h4 class="cardProduct__descp-title">Размеры:</h4>
-				<ul class="cardProduct__descp-title-list">
+					<?php echo wpautop(carbon_get_the_post_meta('as_char'))?>
+				<!-- <ul class="cardProduct__descp-title-list">
 					<li>Длина: 140 мм</li>
 					<li>Ширина: 140 мм</li>
 					<li>Высота: 160 мм</li>
-				</ul>
+				</ul> -->
 
 				<h4 class="cardProduct__descp-title">Материалы:</h4>
 				<div class="cardProduct__descp-title-text">
