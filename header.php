@@ -208,17 +208,17 @@
         <div class="mobile-catalog">
           <div class="mobile-catalog__btn">Продукция</div>
         </div>
-        <a href="<?php echo get_post_type_archive_link('asgproduct');?>" class="catalog-link">
+        <div class="catalog-link menu-side-open">
           <span class="catalog-link__hamburger"></span>
           <span class="catalog-link__text">Весь каталог</span>
-        </a>
+        </div>
         <?php main_menu();?>
         <div class="hamburger"><span>Меню</span></div>
       </div>
     </nav>
 
     <div class="menu-side">
-      <button class="menu-side__closed"></button>
+      <button class="menu-side__closed menu-side-close"></button>
       <div class="menu-side__body">
         <ul class="menu-side__body-list">
           <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Популярные товары</a></li>

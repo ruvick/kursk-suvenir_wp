@@ -55,6 +55,46 @@ window.addEventListener("load", function () {
 let unlock = true;
 //=================
 
+const iconMenuOpen = document.querySelector(".menu-side-open");
+const iconMenuClose = document.querySelector(".menu-side-close");
+const body = document.querySelector("body");
+const menuSide = document.querySelector(".menu-side");
+
+//BURGER
+if (iconMenuOpen) {
+  iconMenuOpen.addEventListener("click", function () {
+    body.classList.add("_lock");
+    menuSide.classList.add("active");
+  });
+}
+
+if (iconMenuClose) {
+  iconMenuClose.addEventListener("click", function () {
+    body.classList.remove("_lock");
+    menuSide.classList.remove("active");
+  });
+}
+
+// Закрытие моб меню при клике на якорную ссылку
+// if (menuListItemElems) {
+//   menuListItemElems.addEventListener("click", function () {
+//     iconMenu.classList.toggle("active");
+//     body.classList.toggle("_lock");
+//     menuBody.classList.toggle("active");
+//   });
+// }
+
+// Закрытие моб меню при клике вне области меню 
+// window.addEventListener('click', e => { // при клике в любом месте окна браузера
+//   const target = e.target // находим элемент, на котором был клик
+//   if (!target.closest('.icon-menu') && !target.closest('.mob-menu') && !target.closest('.header__mob-search-btn') && !target.closest('.header__search-mob') && !target.closest('._popup-link') && !target.closest('.popup')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+//     iconMenu.classList.remove('active') // то закрываем окно навигации, удаляя активный класс
+//     menuBody.classList.remove('active')
+//     body.classList.remove('_lock')
+//     headsearch.classList.remove('_active')
+//   }
+// })
+
 //ActionsOnHash
 if (location.hash) {
   const hsh = location.hash.replace('#', '');
@@ -64,27 +104,6 @@ if (location.hash) {
     _goto(document.querySelector('.' + hsh), 500, '');
   }
 }
-//=================
-
-//Menu старое
-// let iconMenu = document.querySelector(".icon-menu");
-// if (iconMenu != null) {
-// 	let delay = 500;
-// 	let menuBody = document.querySelector(".menu__body");
-// 	iconMenu.addEventListener("click", function (e) {
-// 		if (unlock) {
-// 			body_lock(delay);
-// 			iconMenu.classList.toggle("_active");
-// 			menuBody.classList.toggle("_active");
-// 		}
-// 	});
-// };
-// function menu_close() {
-// 	let iconMenu = document.querySelector(".icon-menu");
-// 	let menuBody = document.querySelector(".menu__body");
-// 	iconMenu.classList.remove("_active");
-// 	menuBody.classList.remove("_active");
-// } 
 //=================
 
 //BodyLock
@@ -931,6 +950,8 @@ let productSl = new Swiper('.cardProductSl', {
   //	el: '.swiper-scrollbar',
   //},
 });
+
+
 
 // JS END ==========================================================================
 
