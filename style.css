@@ -4786,6 +4786,14 @@ input[type=text], input[type=email], input[type=tel], textarea {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .prodCard__column {
+    display: flex;
+    flex: 0 1 25%;
+    padding: 0 17px 24px 17px;}
+}
+
 @media screen and (max-width: 1200px) {
   .hamburger {
     display: block;
@@ -4850,6 +4858,13 @@ input[type=text], input[type=email], input[type=tel], textarea {
   }
   .cardProduct__slider {
     height: 550px;}
+}
+
+@media screen and (max-width: 1024px) {
+  .similar {
+    padding: 52px 0;}
+  .prodCard__column {
+    flex: 0 1 33.333%;}
 }
 
 @media screen and (max-width: 1000px) {
@@ -4951,6 +4966,25 @@ input[type=text], input[type=email], input[type=tel], textarea {
     justify-content: center;
     align-items: center;
     height: 350px;}
+  .prodCard__row {
+    flex-wrap: nowrap;
+    margin: 0;
+    width: 100%;
+    overflow: auto;}
+  .prodCard__column {
+    flex: 0 0 38%;
+    padding: 0;
+    margin-right: 15px;}
+  .prodCard__column:last-child {
+    margin-right: 0;}
+  ::-webkit-scrollbar-thumb {
+    display: none;}
+  .similar {
+    padding: 20px 0;}
+  .single-section-title {
+    margin-bottom: 20px;}
+  .cardProduct {
+    padding: 20px 0;}
 }
 
 
@@ -4986,6 +5020,12 @@ input[type=text], input[type=email], input[type=tel], textarea {
   }
 
 }
+
+@media screen and (max-width: 612px) {
+  .prodCard__column {
+    flex: 0 0 55%;}
+}
+
 @media screen and (max-width: 600px) {
   .header .container {
     -webkit-flex-wrap: wrap;
@@ -5132,6 +5172,12 @@ input[type=text], input[type=email], input[type=tel], textarea {
     margin-top: 14px
   }
 }
+
+@media screen and (max-width: 460px) {
+  .prodCard__column {
+    flex: 0 0 65%;}
+}
+
 @media screen and (max-width: 420px) {
   .single-product__gallery {
     width: 90%;
@@ -5190,6 +5236,12 @@ input[type=text], input[type=email], input[type=tel], textarea {
     right: 0;
   }
 }
+
+@media screen and (max-width: 414px) {
+  .prodCard__column {
+    flex: 0 0 75%;}
+}
+
 @media screen and (max-width: 400px) {
 
   .product-loop__price-reg {
@@ -5202,4 +5254,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
   .product-loop__price-reg > * {
     margin-bottom: 8px;
   }
+}
+
+@media screen and (max-width: 375px) {
+  .prodCard__column {
+    flex: 0 0 85%;}
 }
