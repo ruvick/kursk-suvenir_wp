@@ -167,6 +167,8 @@ function souvenir_scripts() {
 	
 	wp_enqueue_script("light", get_template_directory_uri() . '/js/lightbox.min.js', array(), null, true);
 
+	wp_enqueue_script("vendors", get_template_directory_uri() . '/js/vendors.min.js', array(), null, true);
+
 	wp_enqueue_script( 'main', get_template_directory_uri(). '/js/custom.js', array(), null, true);
 
 	wp_localize_script( 'main', 'allAjax', array(

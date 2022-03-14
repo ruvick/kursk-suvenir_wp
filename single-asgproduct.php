@@ -44,12 +44,12 @@ get_header('page'); ?>
 
 				<h4 class="cardProduct__descp-title">Цвет</h4>
 				<div class="cardProduct__descp-color">
-					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_white"></a>
-					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_red"></a>
-					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_brown"></a>
-					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_green"></a>
-					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_blue"></a>
-					<a href="#" class="cardProduct__descp-color-link cardProduct__descp-color-link_black"></a>
+					<a href="#" class="cardProduct__descp-color-link Btn-color-link Btn-color-link_white"></a>
+					<a href="#" class="cardProduct__descp-color-link Btn-color-link Btn-color-link_red"></a>
+					<a href="#" class="cardProduct__descp-color-link Btn-color-link Btn-color-link_brown"></a>
+					<a href="#" class="cardProduct__descp-color-link Btn-color-link Btn-color-link_green"></a>
+					<a href="#" class="cardProduct__descp-color-link Btn-color-link Btn-color-link_blue"></a>
+					<a href="#" class="cardProduct__descp-color-link Btn-color-link Btn-color-link_black"></a>
 				</div>
 
 				<h4 class="cardProduct__descp-title">Описание</h4> 
