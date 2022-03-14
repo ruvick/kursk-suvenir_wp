@@ -32,7 +32,7 @@ get_header();
             </div>
             <div class="container">
               <div class="main-bnr__content">
-                <h1 class="main-bnr__title">Сувенирная продукция <span>Курской области</span></h1>
+                <h1 class="main-bnr__title">Сувенирная продукция <span>Курского края</span></h1>
               </div>
             </div>
           </div>
