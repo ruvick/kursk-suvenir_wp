@@ -217,4 +217,27 @@
       </div>
     </nav>
 
+    <div class="menu-side">
+      <button class="menu-side__closed"></button>
+      <div class="menu-side__body">
+        <ul class="menu-side__body-list">
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Популярные товары</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Модная сказка Хохломы</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Для интерьера</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Коллекция "Ретро"</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Мебель</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Мебель детская</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Иконы</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Ложки</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Матрешки</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Новогодний ассортимент</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Офисные принадлежности</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Посуда</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">С геральдикой и символикой</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">С миниатюрной росписью</a></li>
+          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Сувениры</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div id="content" class="site-content">
