@@ -155,7 +155,7 @@ get_header('page'); ?>
           </form>
         </div>
 
-    	<div class="catalog-sec__row prodCard__row">
+    	<div class="catalog-sec__row">
         <?php 
           while(have_posts()):
             the_post();
