@@ -46,14 +46,14 @@
 											<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Цена</div>
 											<div class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
 												<div class="catalog-sec__sidebar-price">
-													<div class="catalog-sec__sidebar-price-input">
+													<div class="catalog-sec__sidebar-price-input catalog-sec__sidebar-price-input-left">
 														<label for="min-price" class="form__label">От</label>
-														<input id="min-price" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="25"
+														<input id="min-price" autocomplete="off" placeholder="200" type="text" name="form[]" data-error="Ошибка" data-value="25"
 														class="input _digital">
 													</div>
-													<div class="catalog-sec__sidebar-price-input">
+													<div class="catalog-sec__sidebar-price-input catalog-sec__sidebar-price-input-right">
 														<label for="max-price" class="form__label">До</label>
-														<input id="max-price" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="15000"
+														<input id="max-price" autocomplete="off" placeholder="15 000" type="text" name="form[]" data-error="Ошибка" data-value="15000"
 														class="input _digital">
 													</div>
 												</div>
