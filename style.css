@@ -4841,7 +4841,26 @@ input[type=text], input[type=email], input[type=tel], textarea {
   color: #DEB65F;
 }
 
-
+.catalog-sec__sidebar-form-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.button_grey {
+  padding: 10px 19px;
+  background: #D2D1D1;
+  border: none;
+}
+.button_red {
+  padding: 10px 19px;
+  color: #fff;
+  background: #AF0018;
+  border: none;
+}
 
 
 
