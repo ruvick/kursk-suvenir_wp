@@ -2638,8 +2638,8 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 24px;
-  padding-right: 24px;
+  /* padding-left: 24px;
+  padding-right: 24px; */
 }
 
 .logo {
@@ -4028,7 +4028,9 @@ article.page {
 .applic__block-title {
   position: relative;
   z-index: 5;
-  margin-bottom: 7px;
+  font-size: 40px;
+  line-height: 33px;
+  margin: 0 0 20px 0;
 }
 
 .applic__block-subtitle {
@@ -4036,7 +4038,7 @@ article.page {
   z-index: 5;
   font-size: 22px;
   line-height: 26.4px;
-  margin-bottom: 51px;
+  margin: 0 0 51px 0;
 }
 
 .applic__block-form {
@@ -4729,7 +4731,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
 }
 
 .menu-side {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -50%;
   z-index: 50;
@@ -4764,7 +4766,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOC43OTciIGhlaWdodD0iMjguODM5IiB2aWV3Qm94PSIwIDAgMjguNzk3IDI4LjgzOSI+DQogIDxnIGlkPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjF8xMTkiIGRhdGEtbmFtZT0i0KHQs9GA0YPQv9C/0LjRgNC+0LLQsNGC0YwgMTE5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MTY4LjA1NiAtOTYyLjU3NSkiPg0KICAgIDxsaW5lIGlkPSLQm9C40L3QuNGPXzkiIGRhdGEtbmFtZT0i0JvQuNC90LjRjyA5IiB4Mj0iMjUuOTY4IiB5Mj0iMjYuMDExIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDE2Ni42NDIgOTYzLjk5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPg0KICAgIDxsaW5lIGlkPSLQm9C40L3QuNGPXzEwIiBkYXRhLW5hbWU9ItCb0LjQvdC40Y8gMTAiIHgxPSIyNS45NjgiIHkyPSIyNi4wMTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00MTY2LjY0MiA5NjMuOTkpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDwvZz4NCjwvc3ZnPg0K');
 }
 .menu-side__body {
- padding: 47px 25px 20px 61px;
+  height: 100%;
+  padding: 30px 25px 35px 50px;
+  overflow: auto;
 }
 .menu-side__body-list {
   padding: 0;
@@ -4840,24 +4844,22 @@ input[type=text], input[type=email], input[type=tel], textarea {
 
 @media screen and (max-width: 1440px) {
   .catalog-link {
-    display: none;
-  }
+    display: none;}
   .main-menu .menu a {
-    font-size: 14px;
-  }
+    font-size: 14px;}
   .main-menu .container {
-    justify-content: flex-end;
-  }
+    justify-content: flex-end;}
+  .logo {
+    margin-left: 0;}
 }
+
 @media screen and (max-width: 1300px) {
-  .container {
-    width: 100%;
-    padding-left: 14px;
-    padding-right: 14px;
-  }
+  .applic__block {
+    padding: 42px 50px 50px 50px;}
   .page-template-page-bascet .container {
-    width: 100%;
-  }
+    width: 100%;}
+  .products-loop {
+    width: 33%;}
 }
 
 @media screen and (max-width: 1280px) {
@@ -4879,12 +4881,6 @@ input[type=text], input[type=email], input[type=tel], textarea {
 
   .main-menu .menu {
     display: none;
-  }
-  .products-wrapper {
-    justify-content: space-around;
-  }
-  .products-loop {
-    width: 240px;
   }
   .products-loop__price .old-price {
     display: block;
@@ -4940,6 +4936,13 @@ input[type=text], input[type=email], input[type=tel], textarea {
     flex: 0 1 33.333%;}
 }
 
+@media screen and (max-width: 1100px) {
+  .applic__block-form-input {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 33%;
+    flex: 0 1 33%;}
+}
+
 @media screen and (max-width: 1024px) {
   .similar {
     padding: 52px 0;}
@@ -4977,6 +4980,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
     margin-bottom: 20px;
     margin-right: 0;
   }
+  .products-loop {
+    width: 49%;}
 }
 
 @media screen and (max-width: 950px) {
@@ -5004,14 +5009,19 @@ input[type=text], input[type=email], input[type=tel], textarea {
     flex: 0 1 25%;}
   .catalog-sec__row .prodCard__column {
     flex: 0 1 50%;}
+  .applic__block-form-input {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 30%;
+    flex: 0 1 30%;}
 }
 
 @media screen and (max-width: 870px) {
   .header-cart__text {
-    display: none;
-  }
+    display: none;}
   .cardProduct__slider {
     height: 400px;}
+  .applic__block {
+    padding: 42px 30px 50px 30px;}
 }
 
 @media screen and (max-width: 812px) {
@@ -5095,6 +5105,24 @@ input[type=text], input[type=email], input[type=tel], textarea {
     margin: 0;}
   .catalog-sec__row {
     margin: 0 -10px;}
+  .main-bnr {
+    height: 380px;}
+  .main-bnr__title {
+    text-align: left;
+    max-width: 100%;}
+  .main-bnr__title span {
+    margin-top: 0;}
+  .cat-products:before,
+  .cat-products:after {
+    display: none;} 
+  .applic__block {
+    padding: 35px;}
+  .applic__block-form .form__line {
+    margin-bottom: 15px;}
+  .applic__block-subtitle {
+    margin: 0 0 35px 0;}
+  .applic__block-form-btn {
+    min-width: 200px;}
 }
 
 
@@ -5128,6 +5156,14 @@ input[type=text], input[type=email], input[type=tel], textarea {
   .page-template-page-reviews .slick-dots {
     bottom: -140px;
   }
+  .products-loop {
+    min-width: 0;}
+  .applic__block-form-input {
+    flex: 0 1 48%;
+    margin-bottom: 10px;}
+  .applic__block-form-btn {
+    min-width: 0;
+    width: 48%;}
 }
 
 @media screen and (max-width: 630px) {
@@ -5173,12 +5209,35 @@ input[type=text], input[type=email], input[type=tel], textarea {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     -o-flex-direction: column;
-    flex-direction: column;
-  }
+    flex-direction: column;}
   .box-modal {
-    width: 96%;
-  }
+    width: 96%;}
+  .applic__block-form-input {
+    flex: 0 1 100%;
+    margin-bottom: 10px;}
+  .applic__block-form-btn {
+    width: 100%;}
 }
+
+@media screen and (max-width: 515px) {
+  .main-bnr {
+    height: 280px;}
+  .main-bnr__title span {
+    font-size: 50px;}
+  .products-loop__photo {
+    height: 220px;}
+  .cat-products .products-loop__title {
+    font-size: 18px;}
+  .cat-products .products-loop__content {
+    z-index: 5;
+    padding: 15px;
+    min-height: 80px;}
+  .products-loop {
+    margin-bottom: 10px;}
+  .applic__block {
+    padding: 35px 15px;}
+}
+
 @media screen and (max-width: 500px) {
   .main-bnr__content {
     padding-left: 20px;
@@ -5367,6 +5426,14 @@ input[type=text], input[type=email], input[type=tel], textarea {
     flex: 0 0 75%;}
   .catalog-sec__row .prodCard__box-descp-flex-link {
     width: 100%;}
+  .products-loop__photo {
+    height: 150px;}
+  .home .products-loop__photo {
+    background-size: 38%;}
+  .cat-products .products-loop__content {
+    min-height: 60px;}
+  .cat-products .products-loop__title {
+    font-size: 14px;}
 }
 
 @media screen and (max-width: 400px) {

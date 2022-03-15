@@ -222,7 +222,33 @@
     <div class="menu-side">
       <button class="menu-side__closed menu-side-close"></button> 
       <div class="menu-side__body">
-        <ul class="menu-side__body-list">
+      <ul class="menu-side__body-list">
+      <?php
+		$terms = get_terms(
+			array(
+				'taxonomy'   => 'asgproductcat',
+				// 'child_of' => 13,
+				'hide_empty' => true,
+				'pad_counts'  => 1, 
+				'orderby' => 'count',
+				'order' => 'ASC',
+        'childless' => true,
+			)
+		);
+
+		if ( ! empty( $terms ) && is_array( $terms ) ) {
+			foreach ( $terms as $term ) { ?>
+				<li class="menu-side__body-list-item">
+					<a href="<?php echo esc_url( get_term_link( $term ) ) ?>" class="menu-side__body-list-item-link">
+						<?php echo $term->name; ?>
+					</a>
+				</li>
+				<?php
+			}
+		}
+		?>
+    </ul>
+        <!-- <ul class="menu-side__body-list">
           <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Популярные товары</a></li>
           <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Модная сказка Хохломы</a></li>
           <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Для интерьера</a></li>
@@ -238,7 +264,7 @@
           <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">С геральдикой и символикой</a></li>
           <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">С миниатюрной росписью</a></li>
           <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Сувениры</a></li>
-        </ul>
+        </ul> -->
       </div>
     </div>
 
