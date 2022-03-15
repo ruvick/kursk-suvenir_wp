@@ -3,11 +3,11 @@
     <div class="catalog-sec__sidebar-form-column">
 								<div class="spollers-block" data-spollers data-one-spoller>
                   <div class="spollers-block__item catalog-sec__sidebar-spollers-item">
-											<div class="spollers-block__title catalog-sec__sidebar-spollers-title" data-spoller>Весь ассортимент</div>
+											<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Весь ассортимент</div>
 											<div class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
 												<label for="check" class="checkbox catalog-sec__sidebar-spollers-checkbox">
 													<input id="check" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<span class="checkbox__text"><span>Бокалы</span></span>
+													<span class="checkbox__text"><span>Бокалы</span></span> 
 												</label>
 												<label for="check1" class="checkbox catalog-sec__sidebar-spollers-checkbox">
 													<input id="check1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[]">
@@ -43,7 +43,7 @@
                     <div class="catalog-sec__sidebar-form-column">
 									<div class="spollers-block" data-spollers data-one-spoller>
 										<div class="spollers-block__item catalog-sec__sidebar-spollers-item">
-											<div class="spollers-block__title catalog-sec__sidebar-spollers-title" data-spoller>Цена</div>
+											<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Цена</div>
 											<div class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
 												<div class="catalog-sec__sidebar-price">
 													<div class="catalog-sec__sidebar-price-input">
@@ -73,7 +73,7 @@
 								    </div>
 
 										<div class="spollers-block__item catalog-sec__sidebar-spollers-item">
-											<div class="spollers-block__title catalog-sec__sidebar-spollers-title" data-spoller>Материал изделия</div>
+											<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Материал изделия</div>
 											<div class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
 												<label for="check" class="checkbox catalog-sec__sidebar-spollers-checkbox">
 													<input id="check" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
