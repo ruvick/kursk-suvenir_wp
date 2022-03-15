@@ -15,7 +15,7 @@ get_header('page'); ?>
 			yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 		}
 	?>
-		<h2 class="single-section-title section-title"><span>Бочата</span></h2>
+		<h2 class="single-section-title section-title"><span>Каталог товаров</span></h2> 
   </div> 
 </section>
 
