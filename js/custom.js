@@ -59,12 +59,14 @@ const iconMenuOpen = document.querySelector(".menu-side-open");
 const iconMenuClose = document.querySelector(".menu-side-close");
 const body = document.querySelector("body");
 const menuSide = document.querySelector(".menu-side");
+const msNuarBlk = document.querySelector(".menu-side-nuar_blk");
 
 //BURGER
 if (iconMenuOpen) {
   iconMenuOpen.addEventListener("click", function () {
     body.classList.add("_lock");
     menuSide.classList.add("active");
+    msNuarBlk.classList.add("active");
   });
 }
 
@@ -72,6 +74,7 @@ if (iconMenuClose) {
   iconMenuClose.addEventListener("click", function () {
     body.classList.remove("_lock");
     menuSide.classList.remove("active");
+    msNuarBlk.classList.remove("active");
   });
 }
 

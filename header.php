@@ -29,6 +29,8 @@
 
 <body <?php body_class(); ?>> 
 
+<div class="menu-side-nuar_blk nuar_blk"></div>
+
   <div style="display: none;">
   <div class="box-modal" id="messgeModal">
       <div class="box-modal_close arcticmodal-close">закрыть</div>
@@ -218,7 +220,7 @@
     </nav>
 
     <div class="menu-side">
-      <button class="menu-side__closed menu-side-close"></button>
+      <button class="menu-side__closed menu-side-close"></button> 
       <div class="menu-side__body">
         <ul class="menu-side__body-list">
           <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Популярные товары</a></li>
