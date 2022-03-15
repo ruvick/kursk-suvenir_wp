@@ -12,41 +12,28 @@
  * @package souvenir
  */
 
-get_header();
-?>
+get_header('page'); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-		    <div class="main-content__wrapper">
-		      <div class="main-content__wrapper container">
-		        <?php get_template_part('template-parts/sidebar-catalog');?>
-		        <div class="main-content">
-				<div class="container">
-					<?php
-					if ( function_exists('yoast_breadcrumb') ) {
-					  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-					}
-					?>
-				</div>
-
+<section id="cardProduct" class="cardProduct">
+  <div class="container">
+	<?php
+		if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+		}
+	?>
 		<?php
 		while ( have_posts() ) :
 			the_post();
-
 			get_template_part( 'template-parts/content', 'page' );
-
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
-
 		endwhile; // End of the loop.
 		?>
-					</div>
-				</div>
-			</div>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div> 
+</section>
 
-<?php
-get_footer();
+<?php get_template_part('template-parts/applic-section'); ?>
+		
+<?php get_footer();

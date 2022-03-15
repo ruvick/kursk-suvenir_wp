@@ -6,25 +6,19 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-		    <div class="main-content__wrapper">
-		      <div class="main-content__wrapper container">
-		        <?php get_template_part('template-parts/sidebar-catalog');?>
-		        <div class="main-content">
-				<div class="container">
-					<?php
-					if ( function_exists('yoast_breadcrumb') ) {
-					  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-					}
-					?>
-				</div>
 
+<section id="cardProduct" class="cardProduct">
+  <div class="container">
+	<?php
+		if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+		}
+	?>
+<h1 class="single-section-title section-title"><span><?php echo the_title();?></span></h1>
 		<?php
 		while ( have_posts() ) :
 			the_post();?>
 			<?php if($arr_reviews = carbon_get_theme_option('reviews_complex_theme')):?> 
-			<h1 class="page-title single-product__title"><?php the_title();?></h1>
 		      <div class="reviews-wrapper">
 		        <div class="reviews-slider">
 		          <?php foreach($arr_reviews as $item):?>
@@ -47,11 +41,8 @@ get_header();
 
 		<?php endwhile; // End of the loop.
 		?>
-					</div>
-				</div>
-			</div>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div> 
+</section>
 
 <?php
 get_footer();
