@@ -4781,6 +4781,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
 }
 .menu-side__body-list {
   padding: 0;
+  margin: 0 0 25px 0;
+}
+.menu-side__body-list:last-child {
   margin: 0;
 }
 .menu-side__body-list li {
@@ -4820,7 +4823,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
   z-index: 6;
 }
 
-
+.menu-side__body-list_mob {
+  display: none;
+}
 
 
 
@@ -4940,6 +4945,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
     height: 550px;}
   .catalog-link {
     display: none;}
+  .menu-side__body-list_mob {
+    display: block;}
 }
 
 @media screen and (max-width: 1150px) {
