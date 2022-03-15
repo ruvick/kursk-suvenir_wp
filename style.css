@@ -4550,6 +4550,10 @@ input[type=text], input[type=email], input[type=tel], textarea {
   display: -ms-flexbox;
   display: flex;
 }
+.catalog-sec__sidebar-price-input label {
+  display: block;
+  margin-bottom: 5px;
+}
 .catalog-sec__sidebar-price-input input {
   font-size: 14px;
   color: #161615;
