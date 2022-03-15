@@ -30,11 +30,121 @@ get_header('page'); ?>
 			<?php get_template_part('template-parts/sorting-block');?>
     	<div class="catalog-sec__row">
         <?php 
-          while(have_posts()):
-            the_post();
-            get_template_part('template-parts/products', 'elem');
-        ?>
-        <?php endwhile;?>
+          	// while(have_posts()):
+            // 	the_post();
+            // 	get_template_part('template-parts/products', 'elem');
+         	// endwhile;
+		?>
+
+		<?
+							
+            $termID = get_queried_object()->term_id;
+
+			$term = get_term_by('id', $child, $taxonomyName);
+			$term_id = $term->term_taxonomy_id; 
+
+			$arg = $wp_query->query;
+
+			$startPrice = empty($_REQUEST["price_ot"])?"0":$_REQUEST["price_ot"];
+			$endPrice = empty($_REQUEST["price_do"])?PHP_INT_MAX:$_REQUEST["price_do"];
+
+			$metaquery = array(
+				'relation' => 'AND',
+				
+				'priceStart' => array (
+					'key'     => '_as_product_price',
+					'value' => $startPrice,
+					'compare' => '>=',
+					'type'    => 'NUMERIC',
+				),
+				
+				'priceEnd' => array (
+					'key'     => '_as_product_price',
+					'value' => $endPrice,
+					'compare' => '<=',
+					'type'    => 'NUMERIC',
+				)
+			);
+
+			
+			// Фильтрация по материалу
+			if (!empty($_REQUEST["material"])) {
+				$metaquery["materialQuery"] = array(
+					'relation' => 'OR',
+				);
+				
+				for ($i = 0; $i<count($_REQUEST["material"]); $i++) {
+					$metaquery["materialQuery"]["material".$i] = array(
+						'key'     => '_tov_material',
+						'value' => $_REQUEST["material"][$i],
+						'compare' => '=',
+						'type'    => 'CHAR',
+					);
+				} 
+			}
+
+
+			// // Фильтрация по стране
+			// if (!empty($_REQUEST["strana"])) {
+			// 	$metaquery["stranaQuery"] = array(
+			// 		'relation' => 'OR',
+			// 	);
+				
+			// 	for ($i = 0; $i<count($_REQUEST["strana"]); $i++) {
+			// 		$metaquery["stranaQuery"]["strana".$i] = array(
+			// 			'key'     => '_offer_country',
+			// 			'value' => $_REQUEST["strana"][$i],
+			// 			'compare' => '=',
+			// 			'type'    => 'CHAR',
+			// 		);
+			// 	} 
+			// }
+
+					$mypostCount = array(
+						'post_type' => 'asgproduct',
+						'posts_per_page' => -1,
+						'meta_query' => $metaquery,
+						'exclude' => array(417),
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'asgproductcat',
+								'field' => 'id',
+								'terms' => strval($termID)
+							),
+						),
+					);
+
+					
+
+					$Count = new WP_Query($mypostCount);
+
+					
+					$mypost = array(
+						'post_type' => 'asgproduct',
+						// 'posts_per_page' => $countInPage,
+						// 'offset' => $startPos,
+						'meta_query' => $metaquery,
+						'meta_key' => '_as_product_price',
+						'orderby' => 'meta_value_num',
+						'order' => 'ASC',
+						'exclude' => array(417),
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'asgproductcat',
+								'field' => 'id',
+								'terms' => strval($termID)
+							),
+						),
+					);
+
+					$loop = new WP_Query($mypost);
+
+					foreach ($loop->posts as $element) {
+						$param = ["element" => $element];
+						get_template_part('template-parts/products', 'elem-param', $param); 
+					}
+		?>
+
       </div>
 
     </div>
