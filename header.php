@@ -215,7 +215,7 @@
           <span class="catalog-link__text">Весь каталог</span>
         </div>
         <?php main_menu();?>
-        <div class="hamburger"><span>Меню</span></div>
+        <div class="hamburger menu-side-open-mob"><span>Меню</span></div>
       </div>
     </nav>
 

@@ -57,6 +57,7 @@ let unlock = true;
 
 const iconMenuOpen = document.querySelector(".menu-side-open");
 const iconMenuClose = document.querySelector(".menu-side-close");
+const iconMenuOpenMob = document.querySelector(".menu-side-open-mob");
 const body = document.querySelector("body");
 const menuSide = document.querySelector(".menu-side");
 const msNuarBlk = document.querySelector(".menu-side-nuar_blk");
@@ -75,6 +76,14 @@ if (iconMenuClose) {
     body.classList.remove("_lock");
     menuSide.classList.remove("active");
     msNuarBlk.classList.remove("active");
+  });
+}
+
+if (iconMenuOpenMob) {
+  iconMenuOpenMob.addEventListener("click", function () {
+    body.classList.add("_lock");
+    menuSide.classList.add("active");
+    msNuarBlk.classList.add("active");
   });
 }
 
