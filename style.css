@@ -4733,15 +4733,18 @@ input[type=text], input[type=email], input[type=tel], textarea {
 .menu-side {
   position: fixed;
   top: 0;
-  left: -50%;
+  left: -110%;
   z-index: 50;
-  width: 20.5%;
+  width: 23%;
   height: 100%;
   background: #fff;
   transition: left 0.8s; 
 }
 .menu-side.active {
   left: 0;
+}
+.menu-side ::-webkit-scrollbar-thumb {
+  display: none;
 }
 .menu-side__closed {
   position: absolute;;
@@ -4843,14 +4846,14 @@ input[type=text], input[type=email], input[type=tel], textarea {
 }
 
 @media screen and (max-width: 1440px) {
-  .catalog-link {
-    display: none;}
   .main-menu .menu a {
     font-size: 14px;}
-  .main-menu .container {
-    justify-content: flex-end;}
+  /* .main-menu .container {
+    justify-content: flex-end;} */
   .logo {
     margin-left: 0;}
+  .menu-side {
+    width: 30%;}
 }
 
 @media screen and (max-width: 1300px) {
@@ -4860,6 +4863,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
     width: 100%;}
   .products-loop {
     width: 33%;}
+  .menu-side {
+    width: 35%;}
 }
 
 @media screen and (max-width: 1280px) {
@@ -4927,6 +4932,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
   }
   .cardProduct__slider {
     height: 550px;}
+  .catalog-link {
+    display: none;}
 }
 
 @media screen and (max-width: 1150px) {
@@ -4948,6 +4955,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
     padding: 52px 0;}
   .prodCard__column {
     flex: 0 1 33.333%;}
+  .menu-side {
+    width: 38%;}
 }
 
 @media screen and (max-width: 1000px) {
@@ -5027,6 +5036,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
 @media screen and (max-width: 812px) {
   .catalog-sec__product {
     flex: 0 1 65%;}
+  .menu-side {
+    width: 50%;}
 }
 
 @media screen and (max-width: 800px) {
@@ -5174,6 +5185,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
 @media screen and (max-width: 612px) {
   .prodCard__column {
     flex: 0 0 55%;}
+  .menu-side {
+    width: 100%;}
 }
 
 @media screen and (max-width: 600px) {
@@ -5434,6 +5447,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
     min-height: 60px;}
   .cat-products .products-loop__title {
     font-size: 14px;}
+  .menu-side__body {
+    padding: 30px 25px 35px 35px;}
 }
 
 @media screen and (max-width: 400px) {

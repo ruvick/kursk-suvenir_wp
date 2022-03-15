@@ -1096,12 +1096,15 @@ jQuery(document).ready(function ($) {
     'albumLabel': ''
   });
 
-  $('.hamburger').click(function () {
-    $('.mob-menu').css('bottom', '0');
-  });
-  $('.close-menu').click(function () {
-    $(this).parent().css('bottom', '120%');
-  });
+  // $('.hamburger').click(function () {
+  //   $('.menu-side').css('left', '0');
+  //   $('.menu-side-nuar_blk').css('display', 'block');
+  // });
+  // $('.menu-side-close').click(function () {
+  //   $(this).parent().css('left', '-110%');
+  //   $('.menu-side-nuar_blk').css('display', 'none');
+  // });
+
   $('.prodcuts-sort select').niceSelect();
 
 
