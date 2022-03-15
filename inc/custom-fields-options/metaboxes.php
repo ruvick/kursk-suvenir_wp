@@ -58,7 +58,29 @@ Container::make('post_meta', 'ca_product', 'Доп поля')
 	->add_fields(array(
 		Field::make('text', 'ca_product_price', 'Цена'),
 	));
-Container::make('post_meta', 'as_product_cr', 'Характеристики товара')
+
+  Container::make('post_meta', 'as_product_param', 'Параметры товара')
+  ->show_on_post_type(array( 'asgproduct'))
+	//->where( 'post_template', '=', 'single-product.php' )
+	->add_fields(array(
+    
+    Field::make( 'color', 'tov_color', 'Цвет') 
+      ->set_width(30)
+      ->set_palette( array( '#fff', '#EC1C24', '#D9A52A', '#39B44A', '#00ADEE', '#000000' ) ),
+    Field::make( 'select', 'tov_material', 'Матерял изделия')
+      ->set_width(30)    
+      ->add_options( array(
+        'Дерево' => 'Дерево',
+        'Металл' => 'Металл',
+        'Керамика' => 'Керамика',
+        'Стекло' => 'Стекло',
+    ) ),
+
+    Field::make( 'text', 'tov_type', 'Тип товара')
+      ->set_width(30),
+	));
+
+  Container::make('post_meta', 'as_product_cr', 'Характеристики товара')
   ->show_on_post_type(array( 'asgproduct'))
 	//->where( 'post_template', '=', 'single-product.php' )
 	->add_fields(array(

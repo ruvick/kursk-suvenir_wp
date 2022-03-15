@@ -169,7 +169,10 @@ function souvenir_scripts() {
 
 	wp_enqueue_script("vendors", get_template_directory_uri() . '/js/vendors.min.js', array(), null, true);
 
+	wp_enqueue_script( 'filter', get_template_directory_uri(). '/js/filter.js', array(), null, true);
+
 	wp_enqueue_script( 'main', get_template_directory_uri(). '/js/custom.js', array(), null, true);
+	
 
 	wp_localize_script( 'main', 'allAjax', array(
       'ajaxurl' => admin_url( 'admin-ajax.php' ),
@@ -747,3 +750,90 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+  // Фильтр Start ================================================================================================================
+
+
+  add_action('rest_api_init', function () {
+	register_rest_route('gensvet/v2', '/get_filter', array(
+		'methods'  => 'GET',
+		'callback' => 'get_filter',
+		'args' => array(
+			'catid' => array(
+				'default'           => null,
+				'required'          => true,
+			)
+		),
+	));
+});
+
+//https://strader.asmi-studio.ru/wp-json/gensvet/v2/get_filter?catid=45
+function get_filter(WP_REST_Request $request)
+{
+
+	$queryParam = array(
+		'post_type' => 'asgproduct',
+		'posts_per_page' => -1,
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'asgproductcat',
+				'field'    => 'id',
+				'terms'    => $request['catid']
+			)
+		)
+
+	);
+
+	//_offer_nal - наличие
+	//_offer_country - страна
+	//_offer_brand - бренд
+
+	$queryMain = new WP_Query($queryParam);
+
+
+	$rez = array();
+
+	
+	$rez["tov_color"] = array();
+	$rez["tov_material"] = array();
+	$rez["tov_type"] = array();
+
+	$min = PHP_INT_MAX;
+	$max = PHP_INT_MIN;
+
+	foreach ($queryMain->posts as $postM) {
+
+		$tov_color = get_post_meta($postM->ID, "_tov_color", true);
+		if (!empty($tov_color) && !in_array($tov_color, $rez["tov_color"]))
+			$rez["tov_color"][] = $tov_color;
+
+		$tov_material = get_post_meta($postM->ID, "_tov_material", true);
+		if (!empty($tov_material) && !in_array($tov_material, $rez["tov_material"]))
+			$rez["tov_material"][] = $tov_material;
+		
+		$tov_type = get_post_meta($postM->ID, "_tov_type", true);
+		if (!empty($tov_type) && !in_array($tov_type, $rez["tov_type"]))
+			$rez["tov_type"][] = $tov_type;
+
+
+
+		if ($min > (int)get_post_meta($postM->ID, "_as_product_price", true))
+			$min = (int)get_post_meta($postM->ID, "_as_product_price", true);
+
+		if ($max < (int)get_post_meta($postM->ID, "_as_product_price", true))
+			$max = (int)get_post_meta($postM->ID, "_as_product_price", true);
+	}
+
+	$rez["offer_price_max"] = $max;
+	$rez["offer_price_min"] = $min;
+
+	sort($rez["tov_color"]);
+	sort($rez["tov_material"]);
+	sort($rez["tov_type"]);
+
+	if (!empty($rez))
+		return $rez;
+	else
+		return new WP_Error('no_token', 'Токен не найден или пользователь уже разлогинен.', ['status' => 403]);
+}
+
+// Фильтр End ================================================================================================================

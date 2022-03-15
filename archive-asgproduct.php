@@ -8,6 +8,8 @@ get_header('page'); ?>
 
 <main id="main" class="site-main">
 
+<div style = "display:none" id = "tovarCategoryId" data-id = "<? echo get_queried_object()->term_id; ?>"></div>
+
 <section id="section-title-sec" class="section-title-sec">
   <div class="container">
 	<?php
