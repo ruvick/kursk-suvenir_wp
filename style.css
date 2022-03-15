@@ -4218,9 +4218,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 302px;
-  max-height: 302px;
-  padding: 0 15px;
+  min-height: 191px;
+  max-height: 191px;
+  padding: 10px;
   border: 0.3px solid #d0d2d3;
   background: #fff;
   margin-bottom: 5px;
