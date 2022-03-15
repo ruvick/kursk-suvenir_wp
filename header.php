@@ -224,49 +224,23 @@
       <div class="menu-side__body">
       <?php wp_nav_menu( array('theme_location' => 'menu-1','menu_class' => 'menu-side__body-list menu-side__body-list_mob',
         'container_class' => 'menu-side__body-list menu-side__body-list_mob','container' => false )); ?> 
-      <ul class="menu-side__body-list">
-      <?php
-		$terms = get_terms(
-			array(
-				'taxonomy'   => 'asgproductcat',
-				// 'child_of' => 13,
-				'hide_empty' => true,
-				'pad_counts'  => 1, 
-				'orderby' => 'count',
-				'order' => 'ASC',
-        'childless' => true,
-			)
-		);
-
-		if ( ! empty( $terms ) && is_array( $terms ) ) {
-			foreach ( $terms as $term ) { ?>
-				<li class="menu-side__body-list-item">
-					<a href="<?php echo esc_url( get_term_link( $term ) ) ?>" class="menu-side__body-list-item-link">
-						<?php echo $term->name; ?>
-					</a>
-				</li>
-				<?php
-			}
-		}
-		?>
-    </ul>
-        <!-- <ul class="menu-side__body-list">
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Популярные товары</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Модная сказка Хохломы</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Для интерьера</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Коллекция "Ретро"</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Мебель</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Мебель детская</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Иконы</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Ложки</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Матрешки</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Новогодний ассортимент</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Офисные принадлежности</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Посуда</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">С геральдикой и символикой</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">С миниатюрной росписью</a></li>
-          <li class="menu-side__body-list-item"><a href="#" class="menu-side__body-list-item-link">Сувениры</a></li>
-        </ul> -->
+      <?			
+				$listCat = wp_list_categories (array(
+				'hierarchical' => true,
+				'taxonomy' => "asgproductcat",
+				'child_of' => get_queried_object()->term_id,
+				'hide_empty' => false,
+				'title_li' => '',
+				'echo' => 0,
+				'depth' => 1,
+				'show_option_none'   => "", 
+				) );
+			?>
+        <ul class="menu-side__body-list">
+          <?
+            echo $listCat;
+          ?>	
+        </ul>
       </div>
     </div>
 

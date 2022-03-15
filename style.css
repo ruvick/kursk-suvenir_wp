@@ -4474,6 +4474,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   padding: 10px 0;
 }
 .spollers-block__title {
+  font-weight: 700;
   cursor: pointer;
 }
 .spollers-block__title._active:after {
@@ -4826,6 +4827,25 @@ input[type=text], input[type=email], input[type=tel], textarea {
 .menu-side__body-list_mob {
   display: none;
 }
+
+.subcatmenu {
+  padding: 0 0 0 10px;
+  margin: 0;
+}
+.subcatmenu li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.subcatmenu li a {
+  color: #DEB65F;
+}
+
+
+
+
+
+
 
 
 
