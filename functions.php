@@ -647,14 +647,14 @@ function oformit_zak() {
 				$rezstr .= "<tr>";	
 
 					$rezstr .= "<td>";
-						$rezstr .= "<a href = '".str_replace("http", "https", get_the_permalink($elempart[0]))."'>".get_the_title($elempart[0]). ' ' . $elempart[7] ."</a>";
+						$rezstr .= "<a href = '".get_the_permalink($elempart[0])."'>".get_the_title($elempart[0]). ' ' . $elempart[7] ."</a>";
 					$rezstr .= "</td>";
 					
 					$rezstr .= "<td>";
 						$rezstr .= $elempart[1];
 					$rezstr .= "</td>";
 					
-					$rezstr .= "<td'>";
+					$rezstr .= "<td>";
 						$rezstr .= "<span>".$elempart[1]*$elempart[6] ."</span> руб.";
 					$rezstr .= "</td>";
 					

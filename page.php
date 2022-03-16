@@ -21,7 +21,7 @@ get_header(); ?>
 			yoast_breadcrumb( '<p id="breadcrumbs">','</p>' ); 
 		}
 	?>
-<h1 class="single-section-title section-title"><span><?php echo the_title();?></span></h1>
+<h1 class="single-section-title section-title"><span class = "whiteSpan"><?php echo the_title();?></span></h1>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<?php the_content();?>
 					<?php endwhile;?>

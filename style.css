@@ -2989,6 +2989,10 @@ a {
   background-color: #f2f2f2
 }
 
+.section-title span.whiteSpan { 
+  background-color: white;
+}
+
 .section-title span:after {
   position: absolute;
   content: '';

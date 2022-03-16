@@ -13,7 +13,7 @@
         data-offertype="<?php echo carbon_get_post_meta($args['element']->ID,'offer_type');?>" 
         data-offersku="<?php echo carbon_get_post_meta($args['element']->ID,'as_sku');?>" 
         data-offerid="<?php echo carbon_get_post_meta($args['element']->ID,'as_sku');?>" 
-        data-pricereg="<?php carbon_get_post_meta($args['element']->ID,'as_product_price');?>" 
+        data-pricereg="<?php echo carbon_get_post_meta($args['element']->ID,'as_product_price');?>" 
         data-src="<?php echo $imgTm;?>" 
         data-weight="<?php echo carbon_get_post_meta($args['element']->ID,'as_product_weight');?>" 
         data-package="<?php echo carbon_get_post_meta($args['element']->ID,'as_product_package');?>">В корзину</a>
