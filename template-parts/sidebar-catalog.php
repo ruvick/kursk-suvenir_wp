@@ -1,4 +1,6 @@
 <div class="catalog-sec__sidebar">
+	<button class="catalog-sec__sidebar-filter-block-mob">Фильтры</button>
+	<div class="catalog-sec__sidebar-body">
 	<div class="loaderSize" id="categoryFilterLoader" style="display: block;">Загрузка...</div>
 	<form id = "categoryFilterForm" action="#" class="catalog-sec__sidebar-form" style="display: none;">
     <div class="catalog-sec__sidebar-form-column">
@@ -95,4 +97,5 @@
       <button type="submit" class="catalog-sec__sidebar-form-btn-limk button button_red">Применить</button>
     </div>
 	</form>
+	</div>
 </div>
