@@ -3576,9 +3576,9 @@ box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.61);
 .close-menu:before {
   transform: rotate(-45deg);
 }
-.page-template-default .site-content {
+/* .page-template-default .site-content {
   background-color: #f2f2f2;
-}
+} */
 .mapLine {
   height: 420px;
   border: 6px solid rgba(237,174,15,1);
@@ -5385,6 +5385,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
     display: block;}
   .search-prodCard__row .prodCard__column {
     flex: 0 1 50%;}
+  .section-title:before,
+  .section-title span:after {
+    display: none;}
 }
 
 @media screen and (max-width: 500px) {
@@ -5548,9 +5551,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .products-loop {
+  /* .products-loop {
     width: 100%;
-  }
+  } */
   .products-loop__photo {
     -webkit-background-size: contain;
     background-size: contain;
