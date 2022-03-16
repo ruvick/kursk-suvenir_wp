@@ -50,14 +50,28 @@ get_header('page'); ?>
 				<p class="cardProduct__descp-info">Представленный вид росписи</p>
 				<p class="cardProduct__descp-info-text">Двойной фон</p>
 
+				<?
+					$elem = carbon_get_the_post_meta('tov_over_color');
+					if($elem) {
+				?>	
+
 				<h4 class="cardProduct__descp-title">Цвет</h4>
 				<div class="cardProduct__descp-color">
-					<div class="form_radio">
+					<?	
+						$elemIndex = 0;
+						foreach($elem as $item) {
+					?>	
+						<a href = "<? echo $item['tov_o_lnk']?>" class="over_color_select" style="background: <? echo $item['tov_o_color']?>"></a>
+					<?
+							$elemIndex++;
+						}
+					?>
+				<!-- <div class="form_radio">
 						<input id="radio-1" type="radio" name="radio" value="1" checked>
 						<label for="radio-1" style="background: #D0D2D3;"></label>
 					</div>
 					<div class="form_radio">
-						<input id="radio-2" type="radio" name="radio" value="2">
+						<inpu	t id="radio-2" type="radio" name="radio" value="2">
 						<label for="radio-2" style="background: #EC1C24;"></label>
 					</div>
 					<div class="form_radio">
@@ -75,9 +89,11 @@ get_header('page'); ?>
 					<div class="form_radio">
 						<input id="radio-6" type="radio" name="radio" value="6">
 						<label for="radio-6" style="background: #000000;"></label>
-					</div>
+					</div> -->
 				</div>
-
+				<?
+					}
+				?>
 				<h4 class="cardProduct__descp-title">Описание</h4> 
 				<div class="cardProduct__descp-title-text">
 					Кружка. Размер изделия  160x140x140мм. Изготовлена в полном соответствии с  традиционной хохломской технологией золочения.  
