@@ -207,9 +207,10 @@
     </div>
     <nav class="main-menu">
       <div class="container">
-        <div class="mobile-catalog">
+        <!-- <div class="mobile-catalog">
           <div class="mobile-catalog__btn">Продукция</div>
-        </div>
+        </div> -->
+        <a href="tel:<?php echo str_replace(array('(', ')', '-', ' '), '', carbon_get_theme_option('as_phone'))?>" class="header-phone header-phone__mob"><?php echo carbon_get_theme_option('as_phone');?></a>
         <div class="catalog-link menu-side-open">
           <span class="catalog-link__hamburger"></span>
           <span class="catalog-link__text">Весь каталог</span>

@@ -3356,10 +3356,10 @@ box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.61);
 .uniSendBtn.button {
   padding-left: 20px;
 }
-.button:hover {
+/* .button:hover {
   background-color: #fff;
   color: #d40000;
-}
+} */
 .toBascetInPage {
   padding-top: 7px;
   padding-bottom: 7px;
@@ -4559,7 +4559,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   color: #161615;
   height: 35px;
   padding: 0 15px;
-  border: 0.97px solid #d0d2d3;
+  border: 0.97px solid #d0d2d3; 
   border-radius: 0;
 }
 .catalog-sec__sidebar-price-input-left input {
@@ -4855,17 +4855,19 @@ input[type=text], input[type=email], input[type=tel], textarea {
   margin-top: 35px;
 }
 .button_grey {
-  padding: 10px 19px;
+  padding: 10px 26px;
+  color: #d30000;
   background: #D2D1D1;
   border: none;
+  text-transform: none;
 }
 .button_red {
-  padding: 10px 19px;
+  padding: 10px 26px;
   color: #fff;
-  background: #AF0018;
+  background: #d30000;
   border: none;
+  text-transform: none;
 }
-
 
 
 
@@ -5242,7 +5244,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   .prodCard__column {
     flex: 0 0 55%;}
   .menu-side {
-    width: 100%;}
+    width: 83%;}
 }
 
 @media screen and (max-width: 600px) {
@@ -5413,6 +5415,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
     width: 100%;
     margin-top: 14px
   }
+  .main-menu .header-phone__mob {
+    display: block;
+    margin: 0;}  
 }
 
 @media screen and (max-width: 460px) {
@@ -5421,13 +5426,15 @@ input[type=text], input[type=email], input[type=tel], textarea {
   .catalog-sec__row .prodCard__box-img {
     min-height: 202px;
     max-height: 202px;}
+  .menu-side__body {
+    padding: 30px 20px 35px 30px;}
 }
 
 @media screen and (max-width: 440px) {
   .catalog-sec__row .prodCard__box-descp-flex {
     flex-wrap: wrap;}
     .catalog-sec__row .prodCard__box-descp-flex-price {
-    margin-bottom: 8px;}
+    margin-bottom: 13px;}
   }
 }
 
@@ -5505,6 +5512,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
     font-size: 14px;}
   .menu-side__body {
     padding: 30px 25px 35px 35px;}
+  .menu-side {
+    width: 88%;}
 }
 
 @media screen and (max-width: 400px) {
@@ -5524,6 +5533,10 @@ input[type=text], input[type=email], input[type=tel], textarea {
 @media screen and (max-width: 375px) {
   .prodCard__column {
     flex: 0 0 85%;}
+  .menu-side {
+    width: 86%;}
+  .menu-side__body {
+    padding: 30px 25px 35px 20px;}
 }
 
 @media screen and (max-width: 345px) {

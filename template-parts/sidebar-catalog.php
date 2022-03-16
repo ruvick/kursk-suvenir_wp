@@ -74,7 +74,7 @@
 		</div>
 		<div class="catalog-sec__sidebar-form-btn">
       <button type="reset" class="catalog-sec__sidebar-form-btn-limk button button_grey">Сбросить</button>
-      <button type="submit" class="catalog-sec__sidebar-form-btn-limk button button_red">Показать</button>
+      <button type="submit" class="catalog-sec__sidebar-form-btn-limk button button_red">Применить</button>
     </div>
 	</form>
 </div>
