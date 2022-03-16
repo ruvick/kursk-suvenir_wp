@@ -88,6 +88,18 @@ Container::make('post_meta', 'ca_product', 'Доп поля')
 
     Field::make( 'text', 'tov_type', 'Тип товара')
       ->set_width(30),
+
+      Field::make('complex', 'tov_over_color', 'Другие цвета')
+      ->add_fields(array(
+        Field::make( 'color', 'tov_o_color', 'Цвет') 
+        ->set_width(50)
+        ->set_palette( array( '#fff', '#EC1C24', '#D9A52A', '#39B44A', '#00ADEE', '#000000' ) ),
+        
+        Field::make( 'text', 'tov_o_lnk', 'Ссылка')
+        ->set_width(50),
+      ))->set_width(100),
+
+      
 	));
 
   Container::make('post_meta', 'as_product_cr', 'Характеристики товара')
