@@ -14,7 +14,11 @@
 					'depth' => 1,
 					'show_option_none'   => "", 
 					) );
+						
+					if (!empty($listCat)) {
+					
 				?>
+
 				<div class="spollers-block__item catalog-sec__sidebar-spollers-item">
 					<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Весь ассортимент</div>
 					<div class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
@@ -23,12 +27,13 @@
 							<span class="checkbox__text"><span>Бокалы</span></span> 
 						</label> -->
 						<ul id="catmenu" class=" subcatmenu ">
-              <?
-                echo $listCat;
-              ?>	
-            </ul>
+							<?
+								echo $listCat;
+							?>	
+						</ul>
 					</div>
 				</div>
+				<?}?>
 
 				<div class="spollers-block__item catalog-sec__sidebar-spollers-item">
 					<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Цена</div>
