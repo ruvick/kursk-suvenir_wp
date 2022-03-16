@@ -1,15 +1,5 @@
 const filterParamLoad = document.location.protocol+'//'+document.location.host+'/wp-json/gensvet/v2/get_filter'
 
-function setSort() {
-    if (sortFormFilter.value == "price_ub")  {
-        price_ub.checked  = true;
-    }
-
-    if (sortFormFilter.value == "price_vozr")  {
-        price_vozr.checked  = true;
-    }
-}
-
 function chengeSort(param) {
     sortFormFilter.value = param;
     categoryFilterForm.submit();
@@ -41,9 +31,16 @@ function getRequests() {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    setSort();
-
     let qParam = getRequests();
+
+    if (qParam.sort == "price_ub")  {
+        price_ub.checked  = true;
+    }
+
+    if (qParam.sort == "price_vozr")  {
+        price_vozr.checked  = true;
+    }
+
     console.log(qParam);
 
     if (document.getElementById('tovarCategoryId') == null) return;

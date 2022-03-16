@@ -139,7 +139,7 @@ get_header('page'); ?>
 						'meta_query' => $metaquery,
 						'meta_key' => '_as_product_price',
 						'orderby' => 'meta_value_num',
-						'order' => 'ASC',
+						'order' => ($_REQUEST["sort"] == 'price_vozr')?'ASC':'DESC',
 						'exclude' => array(417),
 						'tax_query' => array(
 							array(
