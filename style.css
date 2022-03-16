@@ -4863,7 +4863,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
 }
 .button_grey {
   padding: 10px 26px;
-  color: #d30000;
+  color: #000;
   background: #D2D1D1;
   border: none;
   text-transform: none;
