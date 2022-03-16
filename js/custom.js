@@ -61,6 +61,8 @@ const iconMenuOpenMob = document.querySelector(".menu-side-open-mob");
 const body = document.querySelector("body");
 const menuSide = document.querySelector(".menu-side");
 const msNuarBlk = document.querySelector(".menu-side-nuar_blk");
+const filterMob = document.querySelector(".catalog-sec__sidebar-filter-block-mob");
+const sidebarBody = document.querySelector(".catalog-sec__sidebar-body");
 
 //BURGER
 if (iconMenuOpen) {
@@ -84,6 +86,12 @@ if (iconMenuOpenMob) {
     body.classList.add("_lock");
     menuSide.classList.add("active");
     msNuarBlk.classList.add("active");
+  });
+}
+
+if (filterMob) {
+  filterMob.addEventListener("click", function () {
+    sidebarBody.classList.toggle("active");
   });
 }
 

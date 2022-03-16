@@ -4905,7 +4905,13 @@ input[type=text], input[type=email], input[type=tel], textarea {
 	border: 1px solid #000;
 }
 
-
+.catalog-sec__sidebar-filter-block-mob {
+  display: none;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d30000;
+  background: transparent;
+}
 
 
 
@@ -5353,6 +5359,12 @@ input[type=text], input[type=email], input[type=tel], textarea {
     margin-bottom: 10px;}
   .applic__block {
     padding: 35px 15px;}
+  .catalog-sec__sidebar-filter-block-mob {
+    display: block;}
+  .catalog-sec__sidebar-body {
+    display: none;}
+  .catalog-sec__sidebar-body.active {
+    display: block;}
 }
 
 @media screen and (max-width: 500px) {
