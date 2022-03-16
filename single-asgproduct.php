@@ -61,11 +61,11 @@ get_header('page'); ?>
 						$elemIndex = 0;
 						foreach($elem as $item) {
 					?>	
-						<a href = "<? echo $item['tov_o_lnk']?>" class="over_color_select" style="background: <? echo $item['tov_o_color']?>"></a>
+						<a href = "<? echo $item['tov_o_lnk']?>" class="over_color_select cardProduct__descp-color-link Btn-color-link Btn-color-link_black" style="background: <? echo $item['tov_o_color']?>"></a>
 					<?
-							$elemIndex++;
+							$elemIndex++; 
 						}
-					?>
+					?> 
 				<!-- <div class="form_radio">
 						<input id="radio-1" type="radio" name="radio" value="1" checked>
 						<label for="radio-1" style="background: #D0D2D3;"></label>
