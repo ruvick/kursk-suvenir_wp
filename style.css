@@ -4544,6 +4544,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
   border: 1px solid #a7a9ac;
   border-radius: 50%;
 }
+.checkbox__input:checked + .checkbox__text:before {
+  background: #d30000;
+}
 
 .catalog-sec__sidebar-price {
   display: -webkit-box;
