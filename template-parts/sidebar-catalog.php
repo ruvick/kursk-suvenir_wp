@@ -49,16 +49,34 @@
 				<div class="spollers-block__item catalog-sec__sidebar-spollers-item">
 					<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Цвет</div>
 					<div id = "filterMaterialWrapper" class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
-            <div class="catalog-sec__sidebar-form-color-btn-flex">
-              <a href="#" class="catalog-sec__sidebar-form-color-btn-link Btn-color-link Btn-color-link_white"></a>
-              <a href="#" class="catalog-sec__sidebar-form-color-btn-link Btn-color-link Btn-color-link_red"></a>
-              <a href="#" class="catalog-sec__sidebar-form-color-btn-link Btn-color-link Btn-color-link_brown"></a>
-              <a href="#" class="catalog-sec__sidebar-form-color-btn-link Btn-color-link Btn-color-link_green"></a>
-              <a href="#" class="catalog-sec__sidebar-form-color-btn-link Btn-color-link Btn-color-link_blue"></a>
-              <a href="#" class="catalog-sec__sidebar-form-color-btn-link Btn-color-link Btn-color-link_black"></a>
-            </div>
+						<div class="catalog-sec__sidebar-form-color-btn-flex">
+							<div class="form_radio">
+								<input id="radio-1" type="radio" name="radio" value="1" checked>
+								<label for="radio-1" style="background: #D0D2D3;"></label>
+							</div>
+							<div class="form_radio">
+								<input id="radio-2" type="radio" name="radio" value="2">
+								<label for="radio-2" style="background: #EC1C24;"></label>
+							</div>
+							<div class="form_radio">
+								<input id="radio-3" type="radio" name="radio" value="3">
+								<label for="radio-3" style="background: #D9A52A;"></label>
+							</div>
+							<div class="form_radio">
+								<input id="radio-4" type="radio" name="radio" value="4">
+								<label for="radio-4" style="background: #39B44A;"></label>
+							</div>
+							<div class="form_radio">
+								<input id="radio-5" type="radio" name="radio" value="5">
+								<label for="radio-5" style="background: #00ADEE;"></label>
+							</div>
+							<div class="form_radio">
+								<input id="radio-6" type="radio" name="radio" value="6">
+								<label for="radio-6" style="background: #000000;"></label>
+							</div>
+						</div>
 					</div>
-				</div>
+				</div> 
 
 				<div class="spollers-block__item catalog-sec__sidebar-spollers-item">
 					<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Материал изделия</div>
