@@ -263,6 +263,26 @@ function main_menu_3() {
 	));
 }
 
+
+// Пагинация
+function wp_corenavi($query = null) {
+  
+  global $wp_query;
+  $main_query = (empty($query))?$wp_query:$query;
+  $total = isset( $main_query->max_num_pages ) ? $main_query->max_num_pages : 1;
+  $a['total'] = $total;
+  $a['mid_size'] = 1; // сколько ссылок показывать слева и справа от текущей
+  $a['end_size'] = 1; // сколько ссылок показывать в начале и в конце
+  $a['prev_text'] = '«'; // текст ссылки "Предыдущая страница"
+  $a['next_text'] = '»'; // текст ссылки "Следующая страница"
+
+  if ( $total > 1 ) echo '<div class="nav-links">';
+  echo paginate_links( $a );
+  if ( $total > 1 ) echo '</div>';
+}
+// =====================================================================
+
+
 add_action( 'init', 'create_asgproduct_taxonomies' );
 
 function create_asgproduct_taxonomies(){
