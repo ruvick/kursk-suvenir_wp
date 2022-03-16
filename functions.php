@@ -619,7 +619,7 @@ function oformit_zak() {
 		if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
 			
 			$headers = array(
-				'From: Заказ на сайте '.$sitename.' <noreply@spetssnab46.ru>',
+				'From: Заказ на сайте '.$sitename.' <noreply@kursk-suvenir.asmi-studio.ru>',
 				'content-type: text/html',
 			);
 			
@@ -629,7 +629,7 @@ function oformit_zak() {
 			$summ = 0;
 			
 			$rezstr = "";
-			$rezstr .= "<table style = 'border-collapse: 1;'>";
+			$rezstr .= "<table style = 'width:100%; border-collapse: 1;'>";
 			
 			$rezstr .= "<tr>";
 			

@@ -1132,7 +1132,7 @@ jQuery(document).ready(function ($) {
   // });
 
 
-  $('img').parent('a').attr("data-lightbox", 'gallery');
+  $('.pageContetn img').parent('a').attr("data-lightbox", 'gallery');
 
 
 

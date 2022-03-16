@@ -31,6 +31,7 @@
 
 <script>
   let thencsPage = "<?echo get_the_permalink(69); ?>"
+  let thencsPageCart = "<?echo get_the_permalink(1041); ?>"
 </script>
 
 <div class="menu-side-nuar_blk nuar_blk"></div>

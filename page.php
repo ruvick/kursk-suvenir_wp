@@ -14,7 +14,7 @@
 
 get_header('page'); ?>
 
-<section id="cardProduct" class="cardProduct">
+<section id="cardProduct" class="cardProduct pageContetn">
   <div class="container">
 	<?php
 		if ( function_exists('yoast_breadcrumb') ) {

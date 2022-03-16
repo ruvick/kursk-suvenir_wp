@@ -189,8 +189,8 @@ jQuery(document).ready(function ($) {
 		console.log(postid);
 
 		var src = jQuery(this).attr('data-src');
-		var name = jQuery(this).parent().siblings('.products-loop__title').text();
-		var price = jQuery(this).parent().parent().find(".products-loop__price").html();
+		var name = jQuery(this).parent().siblings('.prodCard__box-descp-title').text();
+		var price = jQuery(this).parent().parent().find(".prodCard__box-descp-flex-price").html();
 		var priceOld = jQuery(this).parent().parent().find('.products-loop__price-old').html();
 		jQuery('.loadImg').attr('src', src);
 		jQuery('.tovName').text(name);
@@ -290,9 +290,8 @@ jQuery(document).ready(function ($) {
 			jQuery(".inputCount").html(0);
 			jQuery(".inputPrice").html(0);
 			jQuery('.bascetTextZonn').html(responce);
-			jQuery('#messgeModal #lineMsg').html(responce);
-			jQuery('#messgeModal').arcticmodal();
-			window.location.replace("https://kursk-suvenir.asmi-studio.ru/spasibo-za-zayavku/");
+	
+			window.location.replace(thencsPageCart);
 
 		});
 
