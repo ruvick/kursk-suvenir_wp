@@ -4913,7 +4913,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
   background: transparent;
 }
 
-
+.search-prodCard__row .prodCard__column {
+  padding: 0 17px 17px 17px;
+}
 
 
 
@@ -5244,6 +5246,14 @@ input[type=text], input[type=email], input[type=tel], textarea {
     margin: 0 0 35px 0;}
   .applic__block-form-btn {
     min-width: 200px;}
+  .search-prodCard__row {
+    width: auto;
+    margin: 0 -5px;
+    flex-wrap: wrap;}
+  .search-prodCard__row .prodCard__column {
+    flex: 0 1 33.333%;
+    padding: 0 5px 5px 5px;
+    margin-right: 0;}
 }
 
 
@@ -5285,6 +5295,13 @@ input[type=text], input[type=email], input[type=tel], textarea {
   .applic__block-form-btn {
     min-width: 0;
     width: 48%;}
+}
+
+@media screen and (max-width: 660px) {
+  .search-prodCard__row .prodCard__box-descp-flex {
+    flex-wrap: wrap;}
+  .search-prodCard__row  .prodCard__box-descp-flex-price {
+    margin-bottom: 10px;}
 }
 
 @media screen and (max-width: 630px) {
@@ -5365,6 +5382,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
     display: none;}
   .catalog-sec__sidebar-body.active {
     display: block;}
+  .search-prodCard__row .prodCard__column {
+    flex: 0 1 50%;}
 }
 
 @media screen and (max-width: 500px) {
@@ -5486,6 +5505,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
     max-height: 202px;}
   .menu-side__body {
     padding: 30px 20px 35px 30px;}
+  
 }
 
 @media screen and (max-width: 440px) {
@@ -5572,6 +5592,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
     padding: 30px 25px 35px 35px;}
   .menu-side {
     width: 88%;}
+  .search-prodCard__row .prodCard__box-descp-flex-link {
+    width: 100%;}
 }
 
 @media screen and (max-width: 400px) {
@@ -5595,6 +5617,17 @@ input[type=text], input[type=email], input[type=tel], textarea {
     width: 86%;}
   .menu-side__body {
     padding: 30px 25px 35px 20px;}
+  .search-prodCard__row .prodCard__box-img {
+    min-height: 130px;
+    max-height: 130px;}
+  .search-prodCard__row .prodCard__box-descp-title {
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 0 0 8px 0;}
+  .search-prodCard__row .prodCard__box-descp {
+    padding: 10px 10px 0 10px;}
+  .search-prodCard__row .prodCard__box-descp-flex-price {
+    font-size: 20px;}
 }
 
 @media screen and (max-width: 345px) {
