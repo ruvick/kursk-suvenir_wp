@@ -1135,6 +1135,21 @@ jQuery(document).ready(function ($) {
   // $(".catalog-link").click(function() {
   //   $(".sidebar-catalog").toggleClass('active');
   // });
+
+
+  $('img').parent('a').attr("data-lightbox", 'gallery');
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 
