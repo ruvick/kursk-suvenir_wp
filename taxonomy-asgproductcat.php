@@ -37,7 +37,8 @@ get_header('page'); ?>
 		?>
 
 		<?
-							
+			$countInPage = !empty($_REQUEST["countinpage"]) ? $_REQUEST["countinpage"] : "12";
+
             $termID = get_queried_object()->term_id;
 
 			$term = get_term_by('id', $child, $taxonomyName);
@@ -118,11 +119,23 @@ get_header('page'); ?>
 
 					$Count = new WP_Query($mypostCount);
 
+					$fullCount = $Count->post_count;
+					
+					$pagenumber = (get_query_var('paged')) ? get_query_var('paged') : 1; 
+				  
+					$startPos = ($pagenumber - 1) * $countInPage;
+							  
+								if ($startPos > $fullCount) {
+								  $pagenumber = 1;
+								  $startPos = ($pagenumber - 1) * $countInPage;
+								}
 					
 					$mypost = array(
 						'post_type' => 'asgproduct',
-						// 'posts_per_page' => $countInPage,
-						// 'offset' => $startPos,
+						
+						'posts_per_page' => $countInPage,
+						'offset' => $startPos,
+
 						'meta_query' => $metaquery,
 						'meta_key' => '_as_product_price',
 						'orderby' => 'meta_value_num',
@@ -139,10 +152,15 @@ get_header('page'); ?>
 
 					$loop = new WP_Query($mypost);
 
+					// echo "<pre>";	
+					// var_dump($loop);
+					// echo "</pre>";
+
 					foreach ($loop->posts as $element) {
 						$param = ["element" => $element];
 						get_template_part('template-parts/products', 'elem-param', $param); 
 					}
+
 		?>
 
       </div>
