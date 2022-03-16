@@ -1058,16 +1058,11 @@ jQuery(document).ready(function ($) {
 
 
       jqXHR.done(function (responce) {
-        $('#order-modal').arcticmodal("close");
-        jQuery('#messgeModal #lineMsg').html("Ваша заявка принята. Мы свяжемся с Вами в ближайшее время.");
-        jQuery('#messgeModal').arcticmodal();
-
+        document.location.href = thencsPage
       });
 
       jqXHR.fail(function (responce) {
-        jQuery('#messgeModal #lineIcon').html('');
-        jQuery('#messgeModal #lineMsg').html("Произошла ошибка! Попробуйте позднее.");
-        jQuery('#messgeModal').arcticmodal();
+        console.log("Произошла ошибка! Попробуйте позднее.");
       });
     }
   });

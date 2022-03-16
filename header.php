@@ -29,6 +29,10 @@
 
 <body <?php body_class(); ?>> 
 
+<script>
+  let thencsPage = "<?echo get_the_permalink(69); ?>"
+</script>
+
 <div class="menu-side-nuar_blk nuar_blk"></div>
 
   <div style="display: none;">
