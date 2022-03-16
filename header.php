@@ -229,7 +229,6 @@
 				$listCat = wp_list_categories (array(
 				'hierarchical' => true,
 				'taxonomy' => "asgproductcat",
-				'child_of' => get_queried_object()->term_id,
 				'hide_empty' => false,
 				'title_li' => '',
 				'echo' => 0,
