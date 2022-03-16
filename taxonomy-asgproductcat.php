@@ -85,21 +85,21 @@ get_header('page'); ?>
 			}
 
 
-			// // Фильтрация по стране
-			// if (!empty($_REQUEST["strana"])) {
-			// 	$metaquery["stranaQuery"] = array(
-			// 		'relation' => 'OR',
-			// 	);
+			// Фильтрация по цвету
+			if (!empty($_REQUEST["color"])) {
+				$metaquery["colorQuery"] = array(
+					'relation' => 'OR',
+				);
 				
-			// 	for ($i = 0; $i<count($_REQUEST["strana"]); $i++) {
-			// 		$metaquery["stranaQuery"]["strana".$i] = array(
-			// 			'key'     => '_offer_country',
-			// 			'value' => $_REQUEST["strana"][$i],
-			// 			'compare' => '=',
-			// 			'type'    => 'CHAR',
-			// 		);
-			// 	} 
-			// }
+				for ($i = 0; $i<count($_REQUEST["color"]); $i++) {
+					$metaquery["colorQuery"]["color".$i] = array(
+						'key'     => '_tov_color',
+						'value' => $_REQUEST["color"][$i],
+						'compare' => '=',
+						'type'    => 'CHAR',
+					);
+				} 
+			}
 
 					$mypostCount = array(
 						'post_type' => 'asgproduct',

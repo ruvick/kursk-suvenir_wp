@@ -1,5 +1,24 @@
 const filterParamLoad = document.location.protocol+'//'+document.location.host+'/wp-json/gensvet/v2/get_filter'
 
+function setSort() {
+    if (sortFormFilter.value == "price_ub")  {
+        price_ub.checked  = true;
+    }
+
+    if (sortFormFilter.value == "price_vozr")  {
+        price_vozr.checked  = true;
+    }
+}
+
+function chengeSort(param) {
+    sortFormFilter.value = param;
+    categoryFilterForm.submit();
+}
+
+function clearFilter() {
+    document.location.href = document.location.protocol+'//'+document.location.host+document.location.pathname
+}
+
 function getRequests() {
     var s1 = location.search.substring(1, location.search.length).split('&'),
         r = {}, s2, i;
@@ -22,7 +41,8 @@ function getRequests() {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-   
+    setSort();
+
     let qParam = getRequests();
     console.log(qParam);
 
@@ -40,17 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(xhr.response);
         
         // Цвет
-        // let uStr = ""
-        // xhr.response.offer_brand.forEach((element, index) => {
+        let uStr = ""
+        xhr.response.tov_color.forEach((element, index) => {
             
-        //     let checed = (qParam.brand != undefined && qParam.brand.includes(element) )?"checked":"";
+            let checed = (qParam.color != undefined && qParam.color.includes(element) )?"checked":"";
 
-        //     uStr += '<label for="check_brand'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
-        //                 '<input id="check_brand'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="brand[]">'+
-        //                 '<span class="checkbox__text"><span>'+element+'</span></span>'+
-        //             '</label>'
-        // });
-        // filterBrandWrapper.innerHTML = uStr;
+            uStr += '<div class="form_radio">'+
+                        '<input id="check_color'+index+'" type="checkbox" name="color[]" '+checed+' value="'+element+'">'+
+                        '<label for="check_color'+index+'" style="background: '+element+';"></label>'+
+                    '</div>';
+
+        });
+        filterColorWrapper.innerHTML = uStr;
 
         // Страна
         uStr = ""
@@ -72,8 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // check_nal.checked  = (qParam.nal == undefined)?false:true;
         
-        priceOt.value = (qParam.price_ot == undefined)?xhr.response.offer_price_min:qParam.price_ot;
-        priceDo.value = (qParam.price_do == undefined)?xhr.response.offer_price_max:qParam.price_do;
+        price_ot.value = (qParam.price_ot == undefined)?xhr.response.offer_price_min:qParam.price_ot;
+        price_do.value = (qParam.price_do == undefined)?xhr.response.offer_price_max:qParam.price_do;
 
 
         categoryFilterLoader.style.display = "none";

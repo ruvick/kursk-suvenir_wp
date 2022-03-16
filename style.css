@@ -4879,6 +4879,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
 .form_radio {
   margin-right: 10px;
 }
+.form_radio input[type=checkbox],
 .form_radio input[type=radio] {
 	display: none;
 }
@@ -4901,7 +4902,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   border-radius: 50%;
 }
 /* Checked */
-.form_radio input[type=radio]:checked + label:before {
+.form_radio input[type=checkbox]:checked + label:before {
 	border: 1px solid #000;
 }
 
