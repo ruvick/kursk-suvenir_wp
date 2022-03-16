@@ -3,6 +3,16 @@
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
+//Поля рубрик
+Container::make('term_meta', 'as_term_catalog', 'Дополнительные поля рубрики')
+->where( 'term_taxonomy', '=', 'asgproductcat' )
+  ->add_fields(array(
+    Field::make('image', 'term_photo', 'Фото категории'),
+    Field::make('image', 'term_photo_webp', 'Фото категории WEBP'),
+    Field::make('text', 'term_index', 'Индекс сортировки'),
+
+  ) );
+
 Container::make( 'theme_options', 'as_theme_options', 'Настройки темы' )
     ->add_tab('Главная', array(
       Field::make( 'image', 'as_logo', 'Логотип')
