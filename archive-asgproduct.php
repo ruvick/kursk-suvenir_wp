@@ -10,40 +10,26 @@ get_header('page'); ?>
 
 <div style = "display:none" id = "tovarCategoryId" data-id = "<? echo get_queried_object()->term_id; ?>"></div>
 
-<section id="section-title-sec" class="section-title-sec">
+<section id="cardProduct" class="cardProduct">
   <div class="container">
-	<?php
-		if ( function_exists('yoast_breadcrumb') ) {
-			yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-		}
-	?>
+		<?php
+			if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' ); 
+			}
+		?>
 		<h2 class="single-section-title section-title"><span>Каталог товаров</span></h2> 
-  </div> 
-</section>
-
-<section id="catalog-sec" class="catalog-sec">
-  <div class="container">
-	<div class="catalog-sec__wrap">
-		<?php get_template_part('template-parts/sidebar-catalog');?>
-    <div class="catalog-sec__product">
-			<?php get_template_part('template-parts/sorting-block');?>
-    	<div class="catalog-sec__row">
-        <?php 
-          while(have_posts()):
-            the_post();
-            get_template_part('template-parts/products', 'elem');
-        ?>
-        <?php endwhile;?>
-      </div>
-    </div>
+		<div class="search-prodCard__row prodCard__row">
+			<?php 
+      	while(have_posts()):
+        	the_post();
+        	get_template_part('template-parts/products', 'elem');
+  		?>
+    	<?php endwhile;?>
 		</div>
-
 		<?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi($loop); ?> 
-
-  </div> 
+	</div> 
 </section>
 </main>
-
 
 <?php get_template_part('template-parts/applic-section'); ?>
 		

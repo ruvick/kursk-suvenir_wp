@@ -86,7 +86,7 @@ get_header('page'); ?>
 				<div class="cardProduct__descp-flex">
 					<div class="cardProduct__descp-price"><span class = "price-reg"><?php echo carbon_get_the_post_meta('as_product_price')?></span> ₽</div>
 					<div class="cardProduct__descp-vendore">Артикул: <?php echo carbon_get_the_post_meta('as_sku')?></div>
-					<button class="cardProduct__descp-btn btn_red toBascetInPage"
+					<button class="cardProduct__descp-btn btn_red btn-hover toBascetInPage"
 					data-postid="<?php echo get_the_ID();?>"
 					data-offertype="<?php echo carbon_get_post_meta(get_the_ID(),'offer_type');?>" 
         			data-offersku="<?php echo carbon_get_post_meta(get_the_ID(),'as_sku');?>" 
@@ -95,8 +95,8 @@ get_header('page'); ?>
 					>В корзину</button>
 				</div>
 
-				<p class="cardProduct__descp-info">Представленный вид росписи</p>
-				<p class="cardProduct__descp-info-text">Двойной фон</p>
+				<!-- <p class="cardProduct__descp-info">Представленный вид росписи</p>
+				<p class="cardProduct__descp-info-text">Двойной фон</p> -->
 
 				<?
 					$elem = carbon_get_the_post_meta('tov_over_color');

@@ -80,7 +80,7 @@
           <input type="tel" id="order-modal-form-phone" placeholder="Телефон"> -->
           <div class="character-block__btn">
             <div class="more-link cancel-link">Отмена</div>
-            <div class="link-consultation product-add-to-cart button link-button toBascetInWin" id="buy-submit-link">В корзину</div>
+            <div class="link-consultation product-add-to-cart button link-button btn-hover toBascetInWin" id="buy-submit-link">В корзину</div>
           </div>
         </form>    
       </div>

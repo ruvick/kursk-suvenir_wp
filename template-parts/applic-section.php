@@ -10,7 +10,7 @@
 					    <input placeholder="Введите имя" type="text" name="name" class="applic__block-form-input input headen_form_blk">
               <input placeholder="Заявка отправленна" type="text" name="name" class="applic__block-form-input input SendetMsg SendetMsg-inpt" style="display:none;" disabled="">
 					    <input placeholder="Введите телефон" type="tel" name="tel" class="applic__block-form-input input">
-					    <button type="button" class="applic__block-form-btn form__btn btn btn_red uniSendBtn">Оставить заявку</button>
+					    <button type="button" class="applic__block-form-btn form__btn btn btn-hover btn_red uniSendBtn">Оставить заявку</button>
 				    </div>
 				    <p class="applic__block-footnote">* Отправляя заявку, вы соглашаетесь на обработку персональных данных</p>
 			    </form>

@@ -1,5 +1,5 @@
 <div class="catalog-sec__sidebar">
-	<button class="catalog-sec__sidebar-filter-block-mob">Фильтры</button>
+	<div class="catalog-sec__sidebar-filter-block-mob"><p class="catalog-sec__sidebar-filter-block-mob-text">Фильтры</p></div>
 	<div class="catalog-sec__sidebar-body">
 	<div class="loaderSize" id="categoryFilterLoader" style="display: block;">Загрузка...</div>
 	<form id = "categoryFilterForm" action="#" class="catalog-sec__sidebar-form" style="display: none;">
@@ -81,7 +81,7 @@
 		</div>
 		<div class="catalog-sec__sidebar-form-btn">
       <button type="reset" onclick = "clearFilter()" class="catalog-sec__sidebar-form-btn-limk button button_grey">Сбросить</button>
-      <button type="submit" class="catalog-sec__sidebar-form-btn-limk button button_red">Применить</button> 
+      <button type="submit" class="catalog-sec__sidebar-form-btn-limk button button_red btn-hover">Применить</button> 
     </div>
 	</form>
 	</div>

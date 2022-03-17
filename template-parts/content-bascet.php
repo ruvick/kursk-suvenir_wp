@@ -191,7 +191,7 @@
 			
 			<div class="checkout-form__block checkout-form__block-submit">
 				<!-- <div class="checkout-form__block-submit-total"><span>Итого <span class="checkout-form__block-submit-qty"><?php echo $bcount; ?></span> товар на сумму <span class="checkout-form__block-submit-summ"><?php echo $bsumm; ?></span> руб.</span></div> -->
-				<div class="checkout-form__block-submit-btn button oformlenieZak" onclick="" >Оставить заявку</div>
+				<div class="checkout-form__block-submit-btn button btn-hover oformlenieZak" onclick="" >Оставить заявку</div>
 			</div>
 			
 			
