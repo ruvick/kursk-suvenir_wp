@@ -107,10 +107,11 @@ Container::make('post_meta', 'ca_product', 'Доп поля')
   ->show_on_post_type(array( 'asgproduct'))
 	//->where( 'post_template', '=', 'single-product.php' )
 	->add_fields(array(
-    Field::make('complex', 'product_modification', 'Модификация товара')
-      ->add_fields(array(
-        Field::make('text', 'mod', 'Модификация'),
-      )),
+    // Field::make('complex', 'product_modification', 'Модификация товара')
+    //   ->add_fields(array(
+    //     Field::make('text', 'mod', 'Модификация'),
+    //   )),
+
 		//  Field::make('text', 'offer_group_id', 'Группа товара')
 		// 	->set_width(50),
 		// Field::make( 'checkbox', 'offer_type', 'Собственный оффер')
@@ -129,14 +130,16 @@ Container::make('post_meta', 'ca_product', 'Доп поля')
 		// 	->set_width(50),
     Field::make('rich_text', 'as_char', 'Характеристики товара (Размеры)'),
     Field::make('rich_text', 'as_complect', 'Комплектация товара (Материалы)'),
+    
     // Field::make('rich_text', 'as_video_prod', 'Видео о товаре'),
     // Field::make('rich_text', 'as_reviews_prod', 'Отзывы о товаре'),
     // Field::make('rich_text', 'as_cert_prod', 'Сертификаты'),
 
-		Field::make('text', 'as_product_weight', 'Вес (г)')
-			->set_width(50),
-		Field::make('text', 'as_product_package', 'Кол-во в упаковке (шт)')
-			->set_width(50),
+		// Field::make('text', 'as_product_weight', 'Вес (г)')
+		// 	->set_width(50),
+		// Field::make('text', 'as_product_package', 'Кол-во в упаковке (шт)')
+		// 	->set_width(50),
+
 		Field::make( 'text', 'as_sku', 'Артикул')
         	->set_width(50),
 		Field::make( 'rich_text', 'as_short_derscr', __( 'Описание' ) ),

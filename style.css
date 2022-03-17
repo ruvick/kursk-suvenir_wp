@@ -4826,6 +4826,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   content: '';
   float: left;
   width: 13px;
+  min-width: 13px;
   height: 13px;
   border-radius: 50%;
   margin-top: 13px;
