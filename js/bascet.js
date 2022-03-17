@@ -166,7 +166,7 @@ jQuery(document).ready(function ($) {
 			jQuery(this).data("offertype"),
 			jQuery(this).data("groupid"),
 			jQuery('#order-popup__param_page').val(),
-			jQuery('.product-loop__price-reg .price-reg').html(),
+			jQuery('.cardProduct__descp-price .price-reg').html(),
 			'1',
 			$(".choice-mod").text()
 		);
