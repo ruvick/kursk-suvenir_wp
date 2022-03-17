@@ -77,6 +77,20 @@
 					</div>
 				</div>
 
+				<div class="spollers-block__item catalog-sec__sidebar-spollers-item">
+					<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Вид росписи</div>
+					<div id = "filterVidRospWrapper" class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
+						
+					</div>
+				</div>
+
+				<div class="spollers-block__item catalog-sec__sidebar-spollers-item">
+					<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Вид рисунка</div>
+					<div id = "filterVidRisWrapper" class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
+						
+					</div>
+				</div>
+
       </div>
 		</div>
 		<div class="catalog-sec__sidebar-form-btn">

@@ -101,6 +101,56 @@ get_header('page'); ?>
 				} 
 			}
 
+			
+			// Фильтрация по виду рисунка
+			if (!empty($_REQUEST["color"])) {
+				$metaquery["colorQuery"] = array(
+					'relation' => 'OR',
+				);
+				
+				for ($i = 0; $i<count($_REQUEST["color"]); $i++) {
+					$metaquery["colorQuery"]["color".$i] = array(
+						'key'     => '_tov_color',
+						'value' => $_REQUEST["color"][$i],
+						'compare' => '=',
+						'type'    => 'CHAR',
+					);
+				} 
+			}
+
+						
+			// Фильтрация по виду росписи
+			if (!empty($_REQUEST["vid_rosp"])) {
+				$metaquery["vid_rospQuery"] = array(
+					'relation' => 'OR',
+				);
+				
+				for ($i = 0; $i<count($_REQUEST["vid_rosp"]); $i++) {
+					$metaquery["vid_rospQuery"]["vid_rosp".$i] = array(
+						'key'     => '_tov_vid_rosp',
+						'value' => $_REQUEST["vid_rosp"][$i],
+						'compare' => '=',
+						'type'    => 'CHAR',
+					);
+				} 
+			}
+						
+			// Фильтрация по виду рисунка
+			if (!empty($_REQUEST["vid_ris"])) {
+				$metaquery["vid_risQuery"] = array(
+					'relation' => 'OR',
+				);
+				
+				for ($i = 0; $i<count($_REQUEST["vid_ris"]); $i++) {
+					$metaquery["vid_risQuery"]["vid_ris".$i] = array(
+						'key'     => '_tov_vid_ris',
+						'value' => $_REQUEST["vid_ris"][$i],
+						'compare' => '=',
+						'type'    => 'CHAR',
+					);
+				} 
+			}
+
 					$mypostCount = array(
 						'post_type' => 'asgproduct',
 						'posts_per_page' => -1,

@@ -70,22 +70,53 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         filterColorWrapper.innerHTML = uStr;
 
-        // Страна
-        uStr = ""
+        // Материал
+        let uStr1 = ""
 
         xhr.response.tov_material.forEach((element, index) => {
 
             let checed = (qParam.material != undefined && qParam.material.includes(element) )?"checked":"";
             
-            uStr += '<label for="check_material'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
+            uStr1 += '<label for="check_material'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
 				'<input id="check_material'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="material[]">'+
 				'<span class="checkbox__text"><span>'+element+'</span></span>'+
 			'</label>';
             console.log(element);
         });
 
-        filterMaterialWrapper.innerHTML = uStr;
+        filterMaterialWrapper.innerHTML = uStr1;
 
+
+        
+        // Вид росписи
+        let uStr2 = ""
+
+        xhr.response.tov_vid_rosp.forEach((element, index) => {
+
+            let checed = (qParam.vid_rosp != undefined && qParam.vid_rosp.includes(element) )?"checked":"";
+            
+            uStr2 += '<label for="check_vid_rosp'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
+				'<input id="check_vid_rosp'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="vid_rosp[]">'+
+				'<span class="checkbox__text"><span>'+element+'</span></span>'+
+			'</label>';
+        });
+
+        filterVidRospWrapper.innerHTML = uStr2;
+
+        // Вид рисунка
+        let uStr3 = ""
+
+        xhr.response.tov_vid_ris.forEach((element, index) => {
+    
+            let checed = (qParam.vid_ris != undefined && qParam.vid_ris.includes(element) )?"checked":"";
+            
+            uStr3 += '<label for="check_vid_ris'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
+                '<input id="check_vid_ris'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="vid_ris[]">'+
+                '<span class="checkbox__text"><span>'+element+'</span></span>'+
+            '</label>';
+        });
+    
+        filterVidRisWrapper.innerHTML = uStr3;
 
 
         // check_nal.checked  = (qParam.nal == undefined)?false:true;

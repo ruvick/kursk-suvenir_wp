@@ -815,7 +815,9 @@ function get_filter(WP_REST_Request $request)
 	
 	$rez["tov_color"] = array();
 	$rez["tov_material"] = array();
-	$rez["tov_type"] = array();
+
+	$rez["tov_vid_rosp"] = array();
+	$rez["tov_vid_ris"] = array();
 
 	$min = PHP_INT_MAX;
 	$max = PHP_INT_MIN;
@@ -830,9 +832,13 @@ function get_filter(WP_REST_Request $request)
 		if (!empty($tov_material) && !in_array($tov_material, $rez["tov_material"]))
 			$rez["tov_material"][] = $tov_material;
 		
-		$tov_type = get_post_meta($postM->ID, "_tov_type", true);
-		if (!empty($tov_type) && !in_array($tov_type, $rez["tov_type"]))
-			$rez["tov_type"][] = $tov_type;
+		$tov_vid_rosp = get_post_meta($postM->ID, "_tov_vid_rosp", true);
+		if (!empty($tov_vid_rosp) && !in_array($tov_vid_rosp, $rez["tov_vid_rosp"]))
+			$rez["tov_vid_rosp"][] = $tov_vid_rosp;
+
+		$tov_vid_ris = get_post_meta($postM->ID, "_tov_vid_ris", true);
+		if (!empty($tov_vid_ris) && !in_array($tov_vid_ris, $rez["tov_vid_ris"]))
+			$rez["tov_vid_ris"][] = $tov_vid_ris;
 
 
 
@@ -848,7 +854,8 @@ function get_filter(WP_REST_Request $request)
 
 	sort($rez["tov_color"]);
 	sort($rez["tov_material"]);
-	sort($rez["tov_type"]);
+	sort($rez["tov_vid_rosp"]);
+	sort($rez["tov_vid_ris"]);
 
 	if (!empty($rez))
 		return $rez;
