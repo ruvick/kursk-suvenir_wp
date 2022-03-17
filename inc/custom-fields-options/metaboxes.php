@@ -19,6 +19,8 @@ Container::make( 'theme_options', 'as_theme_options', 'Настройки тем
         ->set_width(30),
       Field::make( 'image', 'as_logo_white', 'Логотип белый')
         ->set_width(30),
+        Field::make('text', 'cat_in_main', 'Категории на главной')
+        ->set_width(100),
     ))
     ->add_tab('Отзывы', array(
       Field::make('complex', 'reviews_complex_theme', 'Отзывы')
@@ -27,8 +29,7 @@ Container::make( 'theme_options', 'as_theme_options', 'Настройки тем
             ->set_width(30),
           Field::make('text', 'name', 'Имя')
             ->set_width(30),
-          Field::make('text', 'date', 'Дата')
-            ->set_width(30),
+
           Field::make('textarea', 'text', 'Текст отзыва')
         ))
     ))
@@ -110,10 +111,10 @@ Container::make('post_meta', 'ca_product', 'Доп поля')
       ->add_fields(array(
         Field::make('text', 'mod', 'Модификация'),
       )),
-		 Field::make('text', 'offer_group_id', 'Группа товара')
-			->set_width(50),
-		Field::make( 'checkbox', 'offer_type', 'Собственный оффер')
-		  ->set_width(50),
+		//  Field::make('text', 'offer_group_id', 'Группа товара')
+		// 	->set_width(50),
+		// Field::make( 'checkbox', 'offer_type', 'Собственный оффер')
+		//   ->set_width(50),
     Field::make( 'checkbox', 'hit', 'Хит')
       ->set_width(50),
     Field::make( 'checkbox', 'new_prod', 'Новый')
@@ -122,15 +123,15 @@ Container::make('post_meta', 'ca_product', 'Доп поля')
 			->set_width(50),
 		Field::make('text', 'as_product_old_price', 'Старая цена')
 			->set_width(50),
-		Field::make('text', 'as_size', 'Размер')
-			->set_width(50),
-		Field::make('text', 'as_age', 'Возраст')
-			->set_width(50),
+		// Field::make('text', 'as_size', 'Размер')
+		// 	->set_width(50),
+		// Field::make('text', 'as_age', 'Возраст')
+		// 	->set_width(50),
     Field::make('rich_text', 'as_char', 'Характеристики товара (Размеры)'),
     Field::make('rich_text', 'as_complect', 'Комплектация товара (Материалы)'),
-    Field::make('rich_text', 'as_video_prod', 'Видео о товаре'),
-    Field::make('rich_text', 'as_reviews_prod', 'Отзывы о товаре'),
-    Field::make('rich_text', 'as_cert_prod', 'Сертификаты'),
+    // Field::make('rich_text', 'as_video_prod', 'Видео о товаре'),
+    // Field::make('rich_text', 'as_reviews_prod', 'Отзывы о товаре'),
+    // Field::make('rich_text', 'as_cert_prod', 'Сертификаты'),
 
 		Field::make('text', 'as_product_weight', 'Вес (г)')
 			->set_width(50),

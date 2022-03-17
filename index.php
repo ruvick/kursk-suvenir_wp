@@ -45,10 +45,10 @@ get_header();
             <?
               $terms = get_terms( [
                   'taxonomy' => "asgproductcat",
-                  'orderby'=> 'meta_value_num',
-                  'meta_key'		=> '_term_index',
-	                'order' => 'ASC',
-	                'include' => [22, 42, 21, 58],
+                  'orderby'=> 'include',
+                  // 'meta_key'		=> '_term_index',
+	                // 'order' => 'ASC',
+	                'include' => carbon_get_theme_option('cat_in_main'),
 
               ] );
 
