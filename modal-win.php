@@ -11,22 +11,16 @@
 				</div>
 				<div class="popup__form-block"> 
 					<h2>Заказать звонок</h2> 
-					
-					<div class="headen_form_blk">
+					<div class="universal_form">
 						<p class="popup__notific">Оставьте заявку и мы свяжемся с Вами в течении 15 минут</p>
-						<form action="#" class="form universal_send_form">
-							
-							<div class="SendetMsg form_msg" style="display:none;">
-								Ваше сообщение успешно отправлено.
-							</div>
-
+						<form action="#" class="form">
 							<div class="form__line">
-								<input id="name" autocomplete="off" type="text" name="name" data-error="Ошибка" data-value="Имя" class="popup__form-input input _req">
-								<input id="tel2" autocomplete="off" type="text" name="tel" data-error="Ошибка" data-value="Телефон" class="popup__form-input input _phone _req">
-							</div>
+								<input placeholder="Введите имя" type="text" name="name" class="popup__form-input input">
+								<input placeholder="Введите телефон" type="tel" name="tel" class="popup__form-input input">
 							<p class="popup__policy">Заполняя данную форму вы соглашаетесь с <a href="#">политикой
 									конфиденциальности</a></p>
-							<button type = "button" class="popup__form-btn form__btn btn u_send">Заказать</button>
+							<button type ="button" class="popup__form-btn btn btn-hover btn_red uniSendBtn">Заказать</button>
+              </div>
 						</form>
 					</div>
 				</div>
@@ -106,6 +100,7 @@
   </div>
   </div>
 </div>
+
 <div style="display: none;">
   <div class="box-modal" id="order-modal">
       <div class="box-modal_close arcticmodal-close"><img src = "<?php bloginfo("template_url");?>/img/close.svg" width = "15px" /></div>
