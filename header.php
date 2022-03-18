@@ -128,8 +128,6 @@
     <div class="menu-side">
       <button class="menu-side__closed menu-side-close"></button> 
       <div class="menu-side__body">
-      <?php wp_nav_menu( array('theme_location' => 'menu-1','menu_class' => 'menu-side__body-list menu-side__body-list_mob',
-        'container_class' => 'menu-side__body-list menu-side__body-list_mob','container' => false )); ?> 
       <?			
 				$listCat = wp_list_categories (array(
 				'hierarchical' => true,
@@ -146,6 +144,8 @@
             echo $listCat;
           ?>	
         </ul>
+        <?php wp_nav_menu( array('theme_location' => 'menu-1','menu_class' => 'menu-side__body-list menu-side__body-list_mob',
+        'container_class' => 'menu-side__body-list menu-side__body-list_mob','container' => false )); ?> 
       </div>
     </div>
 
