@@ -1120,13 +1120,14 @@ jQuery(document).ready(function ($) {
   $('.prodcuts-sort select').niceSelect();
 
 
-  jQuery(".dialog-cb-button__decstop a").click(function () {
+  // jQuery(".dialog-cb-button__decstop a").click(function () {
 
-    headerwin = jQuery(this).data("headerwin");
-    btn = jQuery(this).data('btn');
+  //   headerwin = jQuery(this).data("headerwin");
+  //   btn = jQuery(this).data('btn');
 
-    jQuery('#phone-modal').arcticmodal();
-  });
+  //   jQuery('#phone-modal').arcticmodal();
+  // });
+
   // $(".catalog-link").click(function() {
   //   $(".sidebar-catalog").toggleClass('active');
   // });

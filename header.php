@@ -32,9 +32,11 @@
 <script>
   let thencsPage = "<?echo get_the_permalink(69); ?>"
   let thencsPageCart = "<?echo get_the_permalink(1041); ?>"
-</script>
+</script> 
 
-<? include "modal-win.php";?>
+<div class="wrapper">  
+  <!-- Подключение  модальных окон-->
+  <? include "modal-win.php";?>
 
 <div class="menu-side-nuar_blk nuar_blk"></div>
 
@@ -78,7 +80,7 @@
         </a>
         <div class="header-contacts">
           <a href="tel:<?php echo str_replace(array('(', ')', '-', ' '), '', carbon_get_theme_option('as_phone'))?>" class="header-phone"><?php echo carbon_get_theme_option('as_phone');?></a>
-          <a href="#" class="header-callback popup-content" data-formid="Заказ звонка в шапке сайта" data-mailmsg="Заказ звонка в шапке сайта">Заказать звонок</a>
+          <a href="#callback" class="header-callback _popup-link" data-formid="Заказ звонка в шапке сайта" data-mailmsg="Заказ звонка в шапке сайта">Заказать звонок</a>
         </div>
       </div>
     </header>

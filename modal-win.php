@@ -7,9 +7,7 @@
 			<div class="popup__close" aria-label="Закрыть модальное окно"></div>
 			<div class="popup__item d-flex">
 				<div class="popup__img">
-					<picture>
-						<source srcset="<?php echo get_template_directory_uri(); ?>/img/popup.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/popup.jpg?_v=1632757662937" alt="">
-					</picture>
+					<img src="<?php echo get_template_directory_uri();?>/img/product.png" alt="">
 				</div>
 				<div class="popup__form-block"> 
 					<h2>Заказать звонок</h2> 
@@ -154,7 +152,7 @@
     </div>
 </div>
 <div class="dialog-cb-button dialog-cb-button__decstop">
-    <a href="#"></a>
+    <a href="#callback" class="_popup-link"></a>
 </div>
 <div class="dialog-cb-button dialog-cb-button__mobile">
     <a class="mgo-number" href="tel:<?php echo str_replace(array('(', ')', '-', ' '), '', carbon_get_theme_option('as_phone'))?>"><?php echo carbon_get_theme_option('as_phone');?></a>
