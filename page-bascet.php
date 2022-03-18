@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<section id="cardProduct" class="cardProduct">
+<section id="cardProduct" class="cardProduct cardProduct-bascet">
   <div class="container">
 	<?php
 		if ( function_exists('yoast_breadcrumb') ) {

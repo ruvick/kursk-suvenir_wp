@@ -5726,7 +5726,20 @@ input[type=text], input[type=email], input[type=tel], textarea {
     max-height: 202px;} */
   .menu-side__body {
     padding: 30px 20px 35px 30px;}
-  
+  .cardProduct-bascet .container {
+    padding-left: 25px;}
+  .product-thumbnail img {
+    border: 1px solid #000;}
+  .form-cart table tr {
+    flex-direction: column;
+    align-items: start;}
+  .product-qunt__wrap select {
+    width: 100%;
+    margin-top: 8px;}
+  .cart-subtotal__price-content {
+    margin-left: 0;}
+  .cart-subtotal__price {
+    justify-content: flex-start;}
 }
 
 @media screen and (max-width: 440px) {
