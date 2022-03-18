@@ -5721,9 +5721,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
 @media screen and (max-width: 460px) {
   .prodCard__column {
     flex: 0 0 65%;}
-  .catalog-sec__row .prodCard__box-img {
+  /* .catalog-sec__row .prodCard__box-img {
     min-height: 202px;
-    max-height: 202px;}
+    max-height: 202px;} */
   .menu-side__body {
     padding: 30px 20px 35px 30px;}
   
