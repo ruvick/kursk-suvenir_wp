@@ -62,6 +62,8 @@ Container::make( 'theme_options', 'as_theme_options', 'Настройки тем
           ->set_width(50),
         Field::make( 'text', 'as_whatsapp', __( 'WhatsApp' ) )
           ->set_width(50),
+        Field::make( 'text', 'as_telegram', __( 'Telegram' ) )
+          ->set_width(50),
         Field::make('text', 'mkad_map_point', 'Координаты карты'),
     ) );
 Container::make('post_meta', 'ca_product', 'Доп поля')

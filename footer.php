@@ -22,11 +22,12 @@
       <div class="footer-title">О компании</div>
       <?php main_menu_2();?>
       <div class="footer-soc__block">
-        <div class="">Мы в соцсетях</div>
+        <div class="">Мы в соцсетях</div> 
         <ul class="ul-clean footer-soc">
-          <li><a href="<?php echo carbon_get_theme_option('as_insta');?>" style="background-image: url(<?php echo get_template_directory_uri();?>/img/instagram.svg)"></a></li>
+          <!-- <li><a href="<?php echo carbon_get_theme_option('as_insta');?>" style="background-image: url(<?php echo get_template_directory_uri();?>/img/instagram.svg)"></a></li> -->
           <li><a href="<?php echo carbon_get_theme_option('as_ok');?>" style="background-image: url(<?php echo get_template_directory_uri();?>/img/odnoklassniki.svg)"></a></li>
           <li><a href="<?php echo carbon_get_theme_option('as_vk');?>" style="background-image: url(<?php echo get_template_directory_uri();?>/img/vk.svg)"></a></li>
+          <li><a href="<?php echo carbon_get_theme_option('as_telegram');?>" style="background-image: url(<?php echo get_template_directory_uri();?>/img/telegram.svg)"></a></li>
         </ul>
       </div>
     </div>
