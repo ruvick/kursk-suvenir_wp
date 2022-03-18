@@ -4953,6 +4953,176 @@ input[type=text], input[type=email], input[type=tel], textarea {
   padding: 0 17px 34px 17px;
 }
 
+/* Popup JS */
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 500000;
+  width: 100%;
+  height: 100%;
+  padding: 30px 10px;
+  -webkit-transition: visibility 0.8s ease 0s;
+  -o-transition: visibility 0.8s ease 0s;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.popup::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease 0s;
+  -o-transition: opacity 0.8s ease 0s;
+  transition: opacity 0.8s ease 0s;
+}
+
+.popup.show {
+  visibility: visible;
+  overflow: auto;
+}
+
+.popup.show::before {
+  opacity: 1;
+}
+
+.popup.show .popup__body {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.popup._active {
+  overflow: auto;
+  visibility: visible;
+}
+
+.popup._active::before {
+  opacity: 1;
+}
+
+.popup._active .popup__body {
+  border-radius: 5px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s ease 0.2s;
+  -o-transition: all 0.3s ease 0.2s;
+  transition: all 0.3s ease 0.2s;
+}
+
+.popup__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  min-height: 100%;
+}
+
+.popup__body {
+  max-width: 800px;
+  width: 100%;
+  background: #EBEFE2;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  overflow: hidden;
+}
+
+.popup__close {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 30;
+  width: 20px;
+  height: 20px;
+  background: url("img/icons/close.svg") 0 0 no-repeat;
+}
+
+.popup__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
+}
+
+.popup__form-block {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 65%;
+          flex: 0 1 65%;
+  padding: 35px;
+}
+
+.popup__form-block h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.popup__notific {
+  margin-bottom: 35px;
+}
+
+.popup__form-input {
+  height: 46px;
+  background: #F6F8F1;
+  border: 1px solid #737373;
+  margin-bottom: 25px;
+}
+
+.popup__policy {
+  margin-bottom: 25px;
+}
+
+.popup__form-btn {
+  font-size: 18px;
+  min-width: 160px;
+}
+.SendetMsg {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600; 
+  margin-top: 80px; }
+.SendetMsg:before{
+  content: "";
+  width: 100%;
+  height: 70px;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 507.2 507.2' style='enable-background:new 0 0 507.2 507.2;' xml:space='preserve'%3E%3Ccircle style='fill:%2332BA7C;' cx='253.6' cy='253.6' r='253.6'/%3E%3Cpath style='fill:%230AA06E;' d='M188.8,368l130.4,130.4c108-28.8,188-127.2,188-244.8c0-2.4,0-4.8,0-7.2L404.8,152L188.8,368z'/%3E%3Cg%3E%3Cpath style='fill:%23FFFFFF;' d='M260,310.4c11.2,11.2,11.2,30.4,0,41.6l-23.2,23.2c-11.2,11.2-30.4,11.2-41.6,0L93.6,272.8 c-11.2-11.2-11.2-30.4,0-41.6l23.2-23.2c11.2-11.2,30.4-11.2,41.6,0L260,310.4z'/%3E%3Cpath style='fill:%23FFFFFF;' d='M348.8,133.6c11.2-11.2,30.4-11.2,41.6,0l23.2,23.2c11.2,11.2,11.2,30.4,0,41.6l-176,175.2 c-11.2,11.2-30.4,11.2-41.6,0l-23.2-23.2c-11.2-11.2-11.2-30.4,0-41.6L348.8,133.6z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+  margin: 10px 0; }
+/* Popup JS End*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
