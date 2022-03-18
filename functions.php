@@ -231,7 +231,7 @@ add_filter('excerpt_more', function($more) {
       );
     
       add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
-      if (wp_mail(carbon_get_theme_option( 'as_email_send' ), 'Заказ с сайта', '<strong>С какой формы:</strong> '.$_REQUEST["msg"].'<br/> <strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"], $headers))
+      if (wp_mail(carbon_get_theme_option( 'as_email_send' ), 'Обратный звонок', '<strong>С какой формы:</strong> '.$_REQUEST["msg"].'<br/> <strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"], $headers))
         wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
       else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>");
       
