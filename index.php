@@ -24,7 +24,7 @@ get_header();
         <div class="main-content-index">
 
           <div class="main-bnr-index main-bnr">
-            <div class="nuar_blk"></div>
+            <div class="main-bnr-index__nuar_blk nuar_blk"></div>
             <div class="main-bnr__slider">
               <div class="main-bnr__item" style="background-image: url(<?php echo get_template_directory_uri();?>/img/k-slide-1.jpg)"></div>
               <div class="main-bnr__item" style="background-image: url(<?php echo get_template_directory_uri();?>/img/k-slide-2.jpg)"></div>

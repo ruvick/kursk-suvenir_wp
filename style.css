@@ -3433,7 +3433,7 @@ box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.61);
     color: #3c3c3c;
     font: 14px/18px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
     box-shadow: 0 0 0 6px rgba(153, 153, 153, .3);
-    border-radius: 6px;
+    border-radius: 0;
 }
 .box-modal_close {
     position: absolute;
@@ -5008,7 +5008,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
 }
 
 .popup._active .popup__body {
-  border-radius: 5px;
+  border-radius: 0;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
@@ -5113,7 +5113,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
   margin: 10px 0; }
 /* Popup JS End*/
 
-
+.main-bnr-index__nuar_blk {
+  background-color: #00000040;
+}
 
 
 
@@ -5435,6 +5437,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   .main-bnr {
     height: 380px;}
   .main-bnr__title {
+    margin-top: 0;
     text-align: left;
     max-width: 100%;}
   .main-bnr__title span {
@@ -5565,7 +5568,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
 
 @media screen and (max-width: 515px) {
   .main-bnr {
-    height: 280px;}
+    height: 360px;}
   .main-bnr__title span {
     font-size: 50px;}
   .products-loop__photo {
@@ -5595,15 +5598,13 @@ input[type=text], input[type=email], input[type=tel], textarea {
     background: #fff;}
   .section-title span {
     background: none;}
-
-    .cat-products .products-loop__content:before {
-      width: 45px;
-    }
-
-    figure p a img {
-      width: 100%;
-      height: auto;
-    }
+  .cat-products .products-loop__content:before {
+    width: 45px;}
+  figure p a img {
+    width: 100%;
+    height: auto;}
+  .main-bnr__item {
+    background-position: center;}
 }
 
 @media screen and (max-width: 500px) {
