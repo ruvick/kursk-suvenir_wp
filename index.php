@@ -40,6 +40,26 @@ get_header();
           <section class="cat-products products"> 
             <div class="container">
             <h2 class="section-title"><span>Каталог продукции</span></h2>
+
+            <form action="#" class="cat-products-form">
+              <div class="cat-products-form__line form__line">
+
+                <div class="cat-products-form__column">
+                  <select name="form[]" class="form">
+                    <option value="1" selected>Пункт №1</option>
+                    <option value="2">Пункт №2</option>
+                    <option value="3">Пункт №3</option>
+                    <option value="4">Пункт №4</option>
+                  </select>
+                </div>
+
+                <div class="cat-products-form__column">
+                  
+                </div>
+
+              </div>
+            </form>
+
             <div class="products-wrapper">
               
             <?

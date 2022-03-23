@@ -12,7 +12,7 @@
 				<div class="popup__form-block"> 
 					<h2>Заказать звонок</h2> 
 					<div class="universal_form">
-						<p class="popup__notific">Оставьте заявку и мы свяжемся с Вами в течении 15 минут</p>
+						<p class="popup__notific">Оставьте заявку и мы свяжемся с Вами в течении 15 минут</p> 
 						<form action="#" class="form">
 							<div class="form__line">
 								<input placeholder="Введите имя" type="text" name="name" class="popup__form-input input">
