@@ -45,16 +45,38 @@ get_header();
               <div class="cat-products-form__line form__line">
 
                 <div class="cat-products-form__column">
+                  <div class="cat-products-form__sel">
+                  <p class="cat-products-form__sel-name">Вид рисунка</p>
                   <select name="form[]" class="form">
                     <option value="1" selected>Пункт №1</option>
                     <option value="2">Пункт №2</option>
                     <option value="3">Пункт №3</option>
                     <option value="4">Пункт №4</option>
                   </select>
+                  </div>
+                  <div class="cat-products-form__sel">
+                    <p class="cat-products-form__sel-name">Вид рисунка</p>
+                  <select name="form[]" class="form">
+                    <option value="1" selected>Пункт №1</option>
+                    <option value="2">Пункт №2</option>
+                    <option value="3">Пункт №3</option>
+                    <option value="4">Пункт №4</option>
+                  </select>
+                  </div>
                 </div>
 
                 <div class="cat-products-form__column">
-                  
+                  <div class="cat-products-form__price">
+							      <div class="cat-products-form__price-input">
+								      <label for="price_ot" class="form__label">От</label>
+								      <input id="price_ot" autocomplete="off" placeholder="200" type="text" name="price_ot" data-error="Ошибка" value="<?echo $_REQUEST["price_ot"]?>"  data-value="<?echo $_REQUEST["price_ot"]?>" class="input _digital">
+							      </div>
+
+							      <div class="cat-products-form__price-input">
+								      <label for="price_do" class="form__label">До</label>
+								      <input id="price_do" autocomplete="off" placeholder="15 000" type="text" name="price_do" data-error="Ошибка" value="<?echo $_REQUEST["price_do"]?>" data-value="<?echo $_REQUEST["price_do"]?>" class="input _digital">
+							      </div>
+						      </div>
                 </div>
 
               </div>
