@@ -7,7 +7,7 @@
 			<div class="popup__close" aria-label="Закрыть модальное окно"></div>
 			<div class="popup__item d-flex">
 				<div class="popup__img">
-					<img src="<?php echo get_template_directory_uri();?>/img/product.png" alt="">
+					<img src="<?php echo get_template_directory_uri();?>/img/popup-img.jpg" alt="">
 				</div>
 				<div class="popup__form-block"> 
 					<h2>Заказать звонок</h2> 
