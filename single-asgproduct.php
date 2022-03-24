@@ -103,7 +103,7 @@ get_header('page'); ?>
 					if($elem) {
 				?>	
 
-				<h4 class="cardProduct__descp-title">Цвет</h4>
+				<h4 class="cardProduct__descp-title">Возможные цвета</h4>
 				<div class="cardProduct__descp-color">
 					<?	
 						$elemIndex = 0;
