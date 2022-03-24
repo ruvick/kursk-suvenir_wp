@@ -5141,7 +5141,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
   border: 1px solid #d9d9d9;
   background-color: #fff;
   cursor: pointer;
-  /* border-radius: 4px; */
+  border-radius: 20px;
 }
 
 .select__value {
@@ -5191,8 +5191,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
 .select__options {
   color: #000;
   position: absolute;
-  top: 33px;
-  border-radius: 0 0 4px 4px;
+  top: 28px;
+  border-radius: 0 0 20px 20px;
   min-width: 100%;
   left: 0;
   background-color: #fff;
@@ -5268,10 +5268,12 @@ input[type=text], input[type=email], input[type=tel], textarea {
   height: 40px;
   padding: 0 15px;
   border: 0.97px solid #d0d2d3;
-  border-radius: 0;
+  border-radius: 20px;
 }
 
-
+.cat-products-form__btn {
+  padding: 10px 36px;
+}
 
 
 

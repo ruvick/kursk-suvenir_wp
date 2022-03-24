@@ -79,6 +79,8 @@ get_header();
 						      </div>
                 </div>
 
+                <button type="submit" class="cat-products-form__btn button button_red btn-hover">Найти</button>
+
               </div>
             </form>
 
