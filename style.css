@@ -5230,20 +5230,26 @@ input[type=text], input[type=email], input[type=tel], textarea {
 .cat-products-form__line {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .cat-products-form__column {
   display: flex;
   justify-content: space-between;
-  flex: 0 1 48%;
+  flex: 0 1 49%;
+  margin-right: 25px;
 }
+.cat-products-form__column:nth-child(2) {
+  flex: 0 1 33.5%;
+}
+
 
 .cat-products-form__sel {
   flex: 0 1 48%;
 }
 
 .cat-products-form__sel-name {
+  padding-left: 10px;
   margin: 0 0 5px 0;
 }
 
@@ -5260,6 +5266,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
 }
 .cat-products-form__price-input label {
   display: block;
+  padding-left: 10px;
   margin-bottom: 5px;
 }
 .cat-products-form__price-input input {
@@ -5613,6 +5620,15 @@ input[type=text], input[type=email], input[type=tel], textarea {
     flex: 0 1 33.333%;
     padding: 0 5px 5px 5px;
     margin-right: 0;}
+  .cat-products-form__line {
+    justify-content: space-between;
+    flex-wrap: wrap;}
+  .cat-products-form__column {
+    flex: 0 1 48%;
+    margin-right: 0;
+    margin-bottom: 10px;}
+  .cat-products-form__column:nth-child(2) {
+    flex: 0 1 48%;}
 }
 
 
@@ -5677,6 +5693,14 @@ input[type=text], input[type=email], input[type=tel], textarea {
     display: none;}
   .popup__form-block {
     flex: 0 1 100%;}
+  .cat-products-form__column {
+    flex: 0 1 100%;}
+  .cat-products-form__column:nth-child(2) {
+    flex: 0 1 100%;}
+  .cat-products-form__price {
+    width: 100%;}
+  .cat-products-form__price-input {
+    flex: 0 1 50%;}
 }
 
 @media screen and (max-width: 600px) {
@@ -5896,6 +5920,13 @@ input[type=text], input[type=email], input[type=tel], textarea {
     margin-left: 0;}
   .cart-subtotal__price {
     justify-content: flex-start;}
+  .cat-products-form__column {
+    flex-wrap: wrap;}
+  .cat-products-form__sel {
+    flex: 0 1 100%;
+    margin-bottom: 10px;}
+  .cat-products-form__sel:last-child {
+    margin-bottom: 0;}
 }
 
 @media screen and (max-width: 440px) {
@@ -5987,6 +6018,15 @@ input[type=text], input[type=email], input[type=tel], textarea {
   .home .products-loop__photo {
     background-size: 50%;}
   .popup__form-btn {
+    width: 100%;}
+  .cat-products-form__price {
+    flex-wrap: wrap;}
+  .cat-products-form__price-input {
+    flex: 0 1 100%;
+    margin-right: 0;
+    margin-bottom: 10px;}
+  .cat-products-form__btn {
+    padding: 10px 36px;
     width: 100%;}
 }
 

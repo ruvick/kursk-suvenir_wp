@@ -68,12 +68,11 @@ get_header();
                 <div class="cat-products-form__column">
                   <div class="cat-products-form__price">
 							      <div class="cat-products-form__price-input">
-								      <label for="price_ot" class="form__label">От</label>
+								      <label for="price_ot" class="form__label">Цена от</label>
 								      <input id="price_ot" autocomplete="off" placeholder="200" type="text" name="price_ot" data-error="Ошибка" value="<?echo $_REQUEST["price_ot"]?>"  data-value="<?echo $_REQUEST["price_ot"]?>" class="input _digital">
 							      </div>
-
 							      <div class="cat-products-form__price-input">
-								      <label for="price_do" class="form__label">До</label>
+								      <label for="price_do" class="form__label">Цена до</label>
 								      <input id="price_do" autocomplete="off" placeholder="15 000" type="text" name="price_do" data-error="Ошибка" value="<?echo $_REQUEST["price_do"]?>" data-value="<?echo $_REQUEST["price_do"]?>" class="input _digital">
 							      </div>
 						      </div>
