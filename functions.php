@@ -1,4 +1,40 @@
 <?php
+
+$color = [
+	'#fff', 
+	'#EC1C24', 
+	'#D9A52A', 
+	'#39B44A', 
+	'#00ADEE', 
+	'#000000'
+];
+
+$vid_rosp = [
+	'Художественная роспись',
+	'Высокохудожественная роспись',
+	'Лаковая миниатюра',
+	'Стилизованные изображения животных',
+	'Стилизованные изображения человека'
+];
+
+$vid_ris = [
+
+	'Полевые цветы',
+	'Ромашки, колоски',
+	'Подсолнухи',
+	'Рябина и желуди',
+	'Сказочный цветок',
+	'Кудривина серебро',
+	'Кудривина золото',
+	'Иней',
+	'Аквариум',
+	'Незабудки',
+	'Хризантемы',
+	'Маки, ромашки',
+	'Ягодка',
+	'Праздничная'
+];
+
 /**
  * souvenir functions and definitions
  *
@@ -790,18 +826,25 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function get_filter(WP_REST_Request $request)
 {
 
+	$tax_array = array(
+		array(
+			'taxonomy' => 'asgproductcat',
+			'field'    => 'id',
+			'terms' =>  $request['catid']
+		)
+	);
+	
+
+
 	$queryParam = array(
 		'post_type' => 'asgproduct',
 		'posts_per_page' => -1,
-		'tax_query' => array(
-			array(
-				'taxonomy' => 'asgproductcat',
-				'field'    => 'id',
-				'terms'    => $request['catid']
-			)
-		)
-
 	);
+
+	if (!empty($request['catid']))
+		$queryParam['tax_query'] = $tax_array;
+
+	// return $queryParam;
 
 	//_offer_nal - наличие
 	//_offer_country - страна

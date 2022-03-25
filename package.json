@@ -9,7 +9,7 @@
     "send_r": "scp -C *.php *.png *.css kursks8r_suvenir@kursks8r.beget.tech:kursk-suvenir.ru/public_html/wp-content/themes/souvenir/",
     "send_ms": "scp -C *.css kursks8r_suvenir@kursks8r.beget.tech:kursk-suvenir.ru/public_html/wp-content/themes/souvenir/",
     "send_one": "scp -C page.php kursks8r_suvenir@kursks8r.beget.tech:kursk-suvenir.ru/public_html/wp-content/themes/souvenir/",
-    "send_one_1": "scp -C single-asgproduct.php kursks8r_suvenir@kursks8r.beget.tech:kursk-suvenir.ru/public_html/wp-content/themes/souvenir/",
+    "send_one_1": "scp -C archive-asgproduct.php kursks8r_suvenir@kursks8r.beget.tech:kursk-suvenir.ru/public_html/wp-content/themes/souvenir/",
     "send_head": "scp -C header.php kursks8r_suvenir@kursks8r.beget.tech:kursk-suvenir.ru/public_html/wp-content/themes/souvenir/",
     "send_cat": "scp -C category.php kursks8r_suvenir@kursks8r.beget.tech:kursk-suvenir.ru/public_html/wp-content/themes/souvenir/",
     "send_singl_prod": "scp -C single-asgproduct.php kursks8r_suvenir@kursks8r.beget.tech:kursk-suvenir.ru/public_html/wp-content/themes/souvenir/",

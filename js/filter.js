@@ -41,12 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
         price_vozr.checked  = true;
     }
 
-    console.log(qParam);
+    
 
     if (document.getElementById('tovarCategoryId') == null) return;
     
     let category = tovarCategoryId.dataset.id;
-     
+    
+    console.log(category);
+
     const xhr = new XMLHttpRequest()
 
     xhr.open('GET', filterParamLoad+"?catid="+category)

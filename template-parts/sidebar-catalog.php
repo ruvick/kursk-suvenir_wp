@@ -6,7 +6,8 @@
     <input type="hidden" id = "sortFormFilter" name = "sort" value = "price_vozr">
 	<div class="catalog-sec__sidebar-form-column">
 			<div class="spollers-block" data-spollers data-one-spoller>
-				<?			
+				<?	
+				
 					$listCat = wp_list_categories (array(
 					'hierarchical' => true,
 					'taxonomy' => "asgproductcat",

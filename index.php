@@ -41,26 +41,34 @@ get_header();
             <div class="container">
             <h2 class="section-title"><span>Каталог продукции</span></h2>
 
-            <form action="#" class="cat-products-form">
+            <form action="<?bloginfo("url")?>/asgproduct" class="cat-products-form">
               <div class="cat-products-form__line form__line">
 
                 <div class="cat-products-form__column">
                   <div class="cat-products-form__sel">
-                  <p class="cat-products-form__sel-name">Вид рисунка</p>
-                  <select name="form[]" class="form">
-                    <option value="1" selected>Пункт №1</option>
-                    <option value="2">Пункт №2</option>
-                    <option value="3">Пункт №3</option>
-                    <option value="4">Пункт №4</option>
+                  <p class="cat-products-form__sel-name">Вид росписи</p>
+                  <select name="vid_rosp[0]" class="form">
+                    <option selected disabled>Выберите вид росписи</option>
+                    <?
+                      foreach ($vid_rosp as $el) {
+                    ?>
+                      <option value="<?echo $el;?>"><?echo $el;?></option>
+                    <?
+                      }
+                    ?>
                   </select>
                   </div>
                   <div class="cat-products-form__sel">
                     <p class="cat-products-form__sel-name">Вид рисунка</p>
-                  <select name="form[]" class="form">
-                    <option value="1" selected>Пункт №1</option>
-                    <option value="2">Пункт №2</option>
-                    <option value="3">Пункт №3</option>
-                    <option value="4">Пункт №4</option>
+                  <select name="vid_ris[0]" class="form">
+                    <option selected disabled>Выберите вид рисунка</option>
+                    <?
+                      foreach ($vid_ris as $el) {
+                    ?>
+                      <option value="<?echo $el;?>"><?echo $el;?></option>
+                    <?
+                      }
+                    ?>
                   </select>
                   </div>
                 </div>
@@ -69,11 +77,11 @@ get_header();
                   <div class="cat-products-form__price">
 							      <div class="cat-products-form__price-input">
 								      <label for="price_ot" class="form__label">Цена от</label>
-								      <input id="price_ot" autocomplete="off" placeholder="200" type="text" name="price_ot" data-error="Ошибка" value="<?echo $_REQUEST["price_ot"]?>"  data-value="<?echo $_REQUEST["price_ot"]?>" class="input _digital">
+								      <input id="price_ot" autocomplete="off" placeholder="200" type="text" name="price_ot" data-error="Ошибка" value="200"  data-value="200" class="input _digital">
 							      </div>
 							      <div class="cat-products-form__price-input">
 								      <label for="price_do" class="form__label">Цена до</label>
-								      <input id="price_do" autocomplete="off" placeholder="15 000" type="text" name="price_do" data-error="Ошибка" value="<?echo $_REQUEST["price_do"]?>" data-value="<?echo $_REQUEST["price_do"]?>" class="input _digital">
+								      <input id="price_do" autocomplete="off" placeholder="15 000" type="text" name="price_do" data-error="Ошибка" value="30000" data-value="30000" class="input _digital">
 							      </div>
 						      </div>
                 </div>
