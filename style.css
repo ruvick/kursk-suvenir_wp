@@ -3087,7 +3087,7 @@ a {
   background-position: center;
   background-size: 70%;
   background-color: #fff;
-  margin-bottom: 6px
+  /* margin-bottom: 6px */
 }
 .home .products-loop__photo {
   /* background-size: 48%; */
@@ -4126,7 +4126,7 @@ article.page {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 5;
+  z-index: 0;
   width: 100px;
   height: 100%;
   background-size: cover;
@@ -4403,6 +4403,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
 }
 .catalog-sec__sidebar {
   flex: 0 1 20.3%;
+  margin-right: 25px;
 }
 .catalog-sec__product {
   flex: 0 1 77.3%;
@@ -5166,7 +5167,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
 
 .select__value span {
   /* height: 1em; */
-  /* overflow: hidden; */
+  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -5585,6 +5586,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
     flex-wrap: wrap;}
   .catalog-sec__sidebar {
     flex: 0 1 100%;
+    margin-right: 0;
     margin-bottom: 25px;}
   .catalog-sec__product {
     flex: 0 1 100%;}
