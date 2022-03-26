@@ -18,6 +18,8 @@ get_header();
 <div id="primary" class="content-area">
   <main id="main" class="site-main"> 
 
+    <div style = "display:none" id = "tovarCategoryId" data-id = "<? echo get_queried_object()->term_id; ?>"></div>
+
     <div class="main-content__wrapper">
       <!-- <div class="main-content__wrapper container"> -->
 
@@ -47,7 +49,7 @@ get_header();
                 <div class="cat-products-form__column">
                   <div class="cat-products-form__sel">
                   <p class="cat-products-form__sel-name">Вид росписи</p>
-                  <select name="vid_rosp[0]" class="form">
+                  <select id = "filterVidRospWrapper_main" name="vid_rosp[0]" class="form">
                     <option selected disabled>Выберите вид росписи</option>
                     <?
                       foreach ($vid_rosp as $el) {
@@ -60,7 +62,7 @@ get_header();
                   </div>
                   <div class="cat-products-form__sel">
                     <p class="cat-products-form__sel-name">Вид рисунка</p>
-                  <select name="vid_ris[0]" class="form">
+                  <select id = "filterVidRisWrapper_main" name="vid_ris[0]" class="form">
                     <option selected disabled>Выберите вид рисунка</option>
                     <?
                       foreach ($vid_ris as $el) {

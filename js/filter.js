@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     '</div>';
 
         });
-        filterColorWrapper.innerHTML = uStr;
+        if (document.getElementById("filterColorWrapper")) filterColorWrapper.innerHTML = uStr;
 
         // Материал
         let uStr1 = ""
@@ -86,12 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(element);
         });
 
-        filterMaterialWrapper.innerHTML = uStr1;
+        if (document.getElementById("filterMaterialWrapper")) filterMaterialWrapper.innerHTML = uStr1;
 
 
         
         // Вид росписи
         let uStr2 = ""
+        let mainPage1 = "<option selected disabled>Выберите вид росписи</option>"
 
         xhr.response.tov_vid_rosp.forEach((element, index) => {
 
@@ -101,12 +102,16 @@ document.addEventListener("DOMContentLoaded", () => {
 				'<input id="check_vid_rosp'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="vid_rosp[]">'+
 				'<span class="checkbox__text"><span>'+element+'</span></span>'+
 			'</label>';
+
+            mainPage1 += '<option value="'+element+'">'+element+'</option>'
         });
 
-        filterVidRospWrapper.innerHTML = uStr2;
+        if (document.getElementById("filterVidRospWrapper")) filterVidRospWrapper.innerHTML = uStr2;
+        if (document.getElementById("filterVidRospWrapper_main")) filterVidRospWrapper_main.innerHTML = mainPage1;
 
         // Вид рисунка
         let uStr3 = ""
+        let mainPage2 = "<option selected disabled>Выберите вид рисунка</option>"
 
         xhr.response.tov_vid_ris.forEach((element, index) => {
     
@@ -116,19 +121,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 '<input id="check_vid_ris'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="vid_ris[]">'+
                 '<span class="checkbox__text"><span>'+element+'</span></span>'+
             '</label>';
+
+            mainPage2 += '<option value="'+element+'">'+element+'</option>'
         });
     
-        filterVidRisWrapper.innerHTML = uStr3;
+        if (document.getElementById("filterVidRisWrapper")) filterVidRisWrapper.innerHTML = uStr3;
+        if (document.getElementById("filterVidRisWrapper_main")) filterVidRisWrapper_main.innerHTML = mainPage2;
 
 
         // check_nal.checked  = (qParam.nal == undefined)?false:true;
         
-        price_ot.value = (qParam.price_ot == undefined)?xhr.response.offer_price_min:qParam.price_ot;
-        price_do.value = (qParam.price_do == undefined)?xhr.response.offer_price_max:qParam.price_do;
+        if (document.getElementById("price_ot")) price_ot.value = (qParam.price_ot == undefined)?xhr.response.offer_price_min:qParam.price_ot;
+        if (document.getElementById("price_do")) price_do.value = (qParam.price_do == undefined)?xhr.response.offer_price_max:qParam.price_do;
 
 
-        categoryFilterLoader.style.display = "none";
-        categoryFilterForm.style.display = "block";
+        if (document.getElementById("categoryFilterLoader")) categoryFilterLoader.style.display = "none";
+        if (document.getElementById("categoryFilterForm")) categoryFilterForm.style.display = "block";
+
+        let selects = document.getElementsByTagName('select');
+        if (selects.length > 0) {
+          selects_init(selects);
+        }
+
     }
 
     xhr.send();

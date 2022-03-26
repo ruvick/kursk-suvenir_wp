@@ -973,11 +973,12 @@ let productSl = new Swiper('.cardProductSl', {
 
 
 //Select
-let selects = document.getElementsByTagName('select');
-if (selects.length > 0) {
-  selects_init();
-}
-function selects_init() {
+// let selects = document.getElementsByTagName('select');
+// if (selects.length > 0) {
+//   selects_init(selects);
+// }
+
+function selects_init(selects) {
   for (let index = 0; index < selects.length; index++) {
     const select = selects[index];
     select_init(select);
@@ -992,6 +993,7 @@ function selects_init() {
     }
   });
 }
+
 function selects_close(e) {
   const selects = document.querySelectorAll('.select');
   if (!e.target.closest('.select') && !e.target.classList.contains('_option')) {
