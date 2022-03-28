@@ -29,6 +29,20 @@ function getRequests() {
     return r;
 };
 
+function get_color_name(color) { 
+    if ( color == '#000000') return "Черный";
+	if ( color == '#EC1C24') return "Красный";
+	if ( color == '#39B44A')  return "Зеленый";
+	if ( color == '#7d0000')  return "Бордовый";
+	if ( color == '##00ADEE')  return "Синий";
+	if ( color == '#FFFF00')  return "Желтый";
+	if ( color == '#6f00cc')  return "Фиолетовый";
+	if ( color == '#D9A52A')  return "Золотой";
+	if ( color == '#C0C0C0')  return "Серебристый";
+
+    return ""
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
     let qParam = getRequests();
@@ -66,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             uStr += '<div class="form_radio">'+
                         '<input id="check_color'+index+'" type="checkbox" name="color[]" '+checed+' value="'+element+'">'+
-                        '<label for="check_color'+index+'" style="background: '+element+';"></label>'+
+                        '<label title ="'+get_color_name(element)+'" for="check_color'+index+'" style="background: '+element+';"></label>'+
                     '</div>';
 
         });

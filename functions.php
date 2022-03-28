@@ -1,13 +1,26 @@
 <?php
 
-$color = [
-	'#fff', 
-	'#EC1C24', 
-	'#D9A52A', 
-	'#39B44A', 
-	'#00ADEE', 
-	'#000000'
+$colorAll = [
+	'#000000'=>"Черный",
+	'#EC1C24'=>"Красный",
+	'#39B44A'=>"Зеленый",
+	'##7d0000'=>"Бордовый",
+	'#00ADEE'=>"Синий",
+	'#FFFF00'=>"Желтый",
+	'#6f00cc'=>"Фиолетовый",
+	'#D9A52A'=>"Золотой",
+	'#C0C0C0'=>"Серебристый"   
 ];
+
+function get_color_name($color) {
+	foreach ($colorAll as $key => $value) {
+		if ($key == $color) {
+			return $value;
+		}
+	}
+
+	return "";
+}
 
 $vid_rosp = [
 	'Художественная роспись',
