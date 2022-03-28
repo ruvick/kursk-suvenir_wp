@@ -5284,7 +5284,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
   padding: 10px 36px;
 }
 
-
+.menu-side__body-cat {
+  margin-bottom: 13px;
+}
 
 
 
@@ -5584,7 +5586,7 @@ input[type=text], input[type=email], input[type=tel], textarea {
     padding: 20px 0;}
   .catalog-sec__wrap {
     flex-wrap: wrap;}
-  .catalog-sec__sidebar {
+  .catalog-sec__sidebar { 
     flex: 0 1 100%;
     margin-right: 0;
     margin-bottom: 25px;}

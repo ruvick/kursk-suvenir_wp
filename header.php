@@ -128,6 +128,7 @@
     <div class="menu-side">
       <button class="menu-side__closed menu-side-close"></button> 
       <div class="menu-side__body">
+        <a href="<?php echo get_post_type_archive_link('asgproduct');?>" class="menu-side__body-cat btn_red btn-hover">Весь ассортимент</a>
       <?			
 				$listCat = wp_list_categories (array(
 				'hierarchical' => true,

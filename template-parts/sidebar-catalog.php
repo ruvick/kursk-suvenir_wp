@@ -57,7 +57,7 @@
 				</div>
 
 				<div class="spollers-block__item catalog-sec__sidebar-spollers-item">
-					<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Цвет</div>
+					<div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Цвет фона</div>
 					<div class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
 						<div id = "filterColorWrapper" class="catalog-sec__sidebar-form-color-btn-flex">
 							<!-- <div class="form_radio">
