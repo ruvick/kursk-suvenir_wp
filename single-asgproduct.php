@@ -22,18 +22,18 @@ get_header('page'); ?>
 			<div class="cardProduct__slider">
 				<div class="cardProductSl _swiper d-flex">
 
-					<div class="cardProduct__slide slider__slide">
+					<a href="<?php echo get_the_post_thumbnail_url( get_the_ID(), "full" );?>" class="cardProduct__slide slider__slide" data-lightbox="gallery">
 						<img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), "full" );?>" alt="">								
-					</div>
+					</a>
 
 					<? 
 						$foto1 = wp_get_attachment_image_src(carbon_get_post_meta(get_the_ID(), 'as_gallery_img_1'), 'full')[0];
 						
 						if (!empty($foto1)) {
 					?>
-						<div class="cardProduct__slide slider__slide">
-							<img src="<?php echo $foto1;?>" alt="">								
-						</div>
+						<a href="<?php echo $foto1;?>" class="cardProduct__slide slider__slide" data-lightbox="gallery">
+							<img src="<?php echo $foto1;?>" alt="">				 		 		
+						</a>
 					<?
 						}
 					?>
@@ -43,9 +43,9 @@ get_header('page'); ?>
 						
 						if (!empty($foto1)) {
 					?>
-						<div class="cardProduct__slide slider__slide">
-							<img src="<?php echo $foto1;?>" alt="">								
-						</div>
+						<a href="<?php echo $foto1;?>" class="cardProduct__slide slider__slide" data-lightbox="gallery">
+							<img src="<?php echo $foto1;?>" alt="">				 		 		
+						</a>
 					<?
 						}
 					?>
@@ -55,9 +55,9 @@ get_header('page'); ?>
 						
 						if (!empty($foto1)) {
 					?>
-						<div class="cardProduct__slide slider__slide">
-							<img src="<?php echo $foto1;?>" alt="">								
-						</div>
+						<a href="<?php echo $foto1;?>" class="cardProduct__slide slider__slide" data-lightbox="gallery">
+							<img src="<?php echo $foto1;?>" alt="">				 		 		
+						</a>
 					<?
 						}
 					?>
@@ -67,15 +67,12 @@ get_header('page'); ?>
 						
 						if (!empty($foto1)) {
 					?>
-						<div class="cardProduct__slide slider__slide">
-							<img src="<?php echo $foto1;?>" alt="">								
-						</div>
+						<a href="<?php echo $foto1;?>" class="cardProduct__slide slider__slide" data-lightbox="gallery">
+							<img src="<?php echo $foto1;?>" alt="">				 		 		
+						</a>
 					<?
 						}
 					?>
-
-				
-
 				</div>
 				<!-- Кнопки-точки -->
 				<div class="product-sl-paggination swiper-paggination"></div>
