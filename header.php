@@ -23,7 +23,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri();?>/img/favicon/icon32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri();?>/img/favicon/icon16.png">
   <link rel="mask-icon" href="<?php echo get_template_directory_uri();?>/img/favicon/safari-pinned-tab.svg" color="#00abaf">
-  <meta name="theme-color" content="#00abaf">
+  <meta name="theme-color" content="#d30000">
   <?php wp_head(); ?>
 </head>
 
